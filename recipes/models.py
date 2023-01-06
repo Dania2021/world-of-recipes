@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-STATUS = (('0', 'Pending'), ('1', 'Approved'), ('2', 'Denied'))
+STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
 
 
 class Recipe(models.Model):
