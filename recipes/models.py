@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
+SKILL_LEVEL = ((0, 'Beginners'), (1, 'Intermediate'), (2, 'Advanced'))
 
 
 class Recipe(models.Model):
@@ -56,7 +56,7 @@ class Recipe(models.Model):
     steps = models.TextField()
     serves = models.IntegerField()
     duration = models.IntegerField()
-    status = models.IntegerField(choices=STATUS, default=0)
+    skill_level = models.IntegerField(choices=SKILL_LEVEL, default=0)
     cuisine_name = models.CharField(
         max_length=30, choices=CUISINE_CHOICES, default=AMERICAN)
     created_on = models.DateTimeField(auto_now_add=True)
