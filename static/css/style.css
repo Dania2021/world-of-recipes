@@ -1,0 +1,14 @@
+/* Google Font import */
+@import url('https://fonts.googleapis.com/css2?family=Fredokawght@600&family=Robotowght@300');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+/*********************Body********/
+body {
+    font-family: Roboto, sans-serif;
+}
