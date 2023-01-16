@@ -109,3 +109,12 @@ footer p{
     margin-bottom: 20px;
 }
 
+/*******************************Media queries************/
+@media screen and (min-width: 320px) {
+    .btn-dark {
+        margin-left: 95px;
+    }
+    footer p {
+        font-size: 55%;
+    }
+}
