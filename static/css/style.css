@@ -145,3 +145,9 @@ footer p{
         font-size: 85%;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .btn-dark {
+        margin-left: 120px;
+    }
+}
