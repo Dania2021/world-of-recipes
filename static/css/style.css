@@ -12,3 +12,43 @@
 body {
     font-family: Roboto, sans-serif;
 }
+
+/*********************Navbar******/
+.navbar {
+    background-color: #000;
+}
+
+.navbar-brand {
+    font-family: "Fredoka One", cursive;
+}
+
+.navbar-nav {
+    margin-left: 150px;
+}
+
+.nav-item {
+    font-size: large;
+    align-items: center;
+}
+
+/*********************Footer******/
+.bg-color {
+    background-color: #000;
+    height: 60px;
+}
+
+footer p{
+    color: #ffff;
+    padding-top: 10px;
+}
+
+#social-media-link {
+    display: flex;
+    justify-content: space-around;
+}
+
+#social-media-link a i {
+    color: #ffff;
+    font-size: xx-large;
+}
+
