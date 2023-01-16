@@ -34,22 +34,25 @@ body {
 /*********************Footer******/
 .bg-color {
     background-color: #000;
-    height: 60px;
+    height: 80px;
+    
 }
 
 footer p{
     color: #ffff;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 #social-media-link {
     display: flex;
     justify-content: space-around;
+    
 }
 
 #social-media-link a i {
     color: #ffff;
     font-size: xx-large;
+    padding-top: 20px;
 }
 
 /********************************Background image****/
@@ -77,6 +80,7 @@ footer p{
     z-index: 1;
 }
 
+/****************Cover text styling******/
 .cover-text {
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffff;
@@ -85,4 +89,23 @@ footer p{
     z-index: 2;
 }
 
+/****************Three cards styling*******/
+.three-cards {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.card-panel {
+    border: solid 2px #000;
+}
+
+.card-text {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn-dark {
+    margin-bottom: 20px;
+}
 
