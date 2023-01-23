@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container-fluid mb-5">
+       <div class="row justify-content-center">
+         <div class="col-md-6">
+              
+                  {% if user.is_authenticated %}
+                   <h2>Add a recipe</h2>
+                   <div class="card-panel">
+                     <form method="POST" class="ms-4 mt-3" action="{% url 'recipe_add' %}" enctype="multipart/form-data">           
+                            
+                        {% csrf_token %}
+                        {{ add_form|crispy }}
+                           <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                      </form>
+                      {% else %}
+                      <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>
+                      {% endif %}
+                  </div>  
+            </div>
+        </div>
+    </div>         
+</div>
+{% endblock %}
+
