@@ -105,6 +105,7 @@ footer p{
     padding-top: 10px;
 }
 
+/*****************************Button styling*************/
 .btn-dark {
     margin-bottom: 20px;
 }
@@ -156,4 +157,9 @@ footer p{
 .masthead {
     margin-top: 110px;
     margin-bottom: 90px;
+}
+
+/***********************alert message styling******************/
+.alert {
+    margin-top: 90px;
 }
