@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+ <div class="masthead">
+     <div class="container-fluid mb-5">
+          <div class="row justify-content-center">
+               <div class="col-md-6">
+                {% if user.is_authenticated %}
+                <div class="card-panel">
+                    <div class="card-body ps-5 px-5 mt-4 mb-4">
+                    <div class="recipe-img-container">
+                        {% if 'placeholder' in recipe.recipe_image.url %}
+                        <img class="card-img-top" width="300px" height="300px"
+                        src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                        {% else %}
+                        <img class="card-img-top" width="300px" height="300px"
+                        src="{{ recipe.recipe_image.url }}">
+                        {% endif %}
+                        </div>
+                    </div> 
+                    <div class="text-center">
+                        <p><span class="fw-bold">Title:</span> {{ recipe.title }}</p>
+                        <p><span class="fw-bold">By {{ recipe.author }}</span></p>
+                        <p><span class="fw-bold">Ingredients:</span> {{ recipe.ingredients }}</p>
+                        <p><span class="fw-bold">Serves:</span> {{ recipe.serves }}</p>
+                        <p><span class="fw-bold">Duration(in minutes):</span> {{ recipe.duration }}</p>
+                        <p><span class="fw-bold">Cuisine:</span> {{ recipe.cuisine_name }}</p>
+                        <p><span class="fw-bold">Skill Level:</span> {{ recipe.skill_level }}</p>
+                        <p><span class="fw-bold">Steps:</span> {{ recipe.steps }}</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="{% url 'recipe_edit' recipe.id %}" class="btn btn-dark ms-2">
+                            Update
+                        </a>
+                        <button class="btn btn-dark" aria-label="Delete my recipe">
+                            Delete</button>
+                    </div>   
+                </div>
+                {% endif %}
+               </div>
+            </div>
+        </div>
+  </div>
+{% endblock %}
