@@ -23,13 +23,26 @@ class Home(View):
         )
 
 
+class Profile(View):
+    
+    def get(self, request, *args, **kwargs):
+        my_recipes = Recipe.objects.filter(author=request.user)
+        return render(
+            request,
+            'recipe.html',
+            {
+                'my_recipes': my_recipes,
+            },
+        )
+
+
 class RecipeDetail(View):
     model = Recipe
     fields = '__all__'
 
-    def get(self, request, author_id, *args, **kwargs):
+    def get(self, request, id, *args, **kwargs):
         recipe_detail = Recipe.objects.all()
-        recipe = get_object_or_404(recipe_detail, id=author_id)
+        recipe = get_object_or_404(recipe_detail, id=id)
         comments = recipe.comments.filter(approved=True)
         return render(
             request,
@@ -66,3 +79,4 @@ class AddRecipeView(View):
                 request, 'There was an error submitting your recipe.')
 
         return HttpResponseRedirect(reverse('home'))
+
