@@ -8,8 +8,11 @@ urlpatterns = [
         'recipes_list/',
         views.RecipeList.as_view(), name='recipes_list'),
     path(
-        'recipe_detail/<int:author_id>/',
+        'recipe_detail/<int:id>/',
         views.RecipeDetail.as_view(), name='recipe_detail'),
     path(
         'recipe_add/', views.AddRecipeView.as_view(), name='recipe_add'),
+    path(
+        'recipe/',
+        views.Profile.as_view(), name='recipe'),
 ]
