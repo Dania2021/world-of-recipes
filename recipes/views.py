@@ -110,3 +110,16 @@ class UpdateRecipeView(View):
             messages.error(request, 'Your Recipe has not been Updated')
      
         return HttpResponseRedirect(reverse('recipe'))
+
+
+class Recipes(View):
+
+    def get(self, request, id, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, id=id)
+        return render(
+            request,
+            'recipes.html',
+            {
+                'recipe': recipe,
+            }
+        )
