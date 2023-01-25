@@ -21,16 +21,14 @@
               {% for recipe in my_recipes %}
              <div>
                 <p class="author ms-4">Author: {{ recipe.author }}</p>
-             
-              <a href="{% url 'recipe_edit' recipe.id %}">
-              <p class="card-title ms-4">{{ recipe.title }}</p></a>
+                <a href="{% url 'recipes' recipe.id %}">
+                <p class="card-title ms-4">{{ recipe.title }}</p></a>
               </div>
               <hr>
               {% endfor %}
-              </div>
+            </div>
           </div>
         </div>
-        
-    </div>              
+      </div>              
  </div>
 {% endblock %}
