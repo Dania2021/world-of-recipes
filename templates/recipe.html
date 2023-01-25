@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container-fluid mb-5">
+      
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            {% if user.is_authenticated %}
+                   
+                   <a href="{% url 'recipe_add' %}" class="btn btn-dark">Add Recipe <i class="fa-light fa-plus"></i></a>
+                   {% endif %}     
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card-panel">
+              <h2 class="ms-4">My recipes</h2>
+              <br>
+              {% for recipe in my_recipes %}
+             <div>
+                <p class="author ms-4">Author: {{ recipe.author }}</p>
+             
+              <a href="{% url 'recipe_edit' recipe.id %}">
+              <p class="card-title ms-4">{{ recipe.title }}</p></a>
+              </div>
+              <hr>
+              {% endfor %}
+              </div>
+          </div>
+        </div>
+        
+    </div>              
+ </div>
+{% endblock %}
