@@ -80,3 +80,33 @@ class AddRecipeView(View):
 
         return HttpResponseRedirect(reverse('home'))
 
+
+class UpdateRecipeView(View):
+
+    def get(self, request, id):
+        recipe = get_object_or_404(Recipe, id=id)
+        update_form = RecipeForm(instance=recipe)
+
+        return render(
+            request,
+            'recipe_edit.html',
+            {
+                'update_form': update_form,
+                'recipe': recipe,
+            }
+        )
+
+    def post(self, request, id):
+        recipe = get_object_or_404(Recipe, id=id)
+        update_form = RecipeForm(
+            request.POST, request.FILES, instance=recipe)
+
+        if update_form.is_valid():
+            update_form.clean()
+            update_form.save()
+            messages.success(request, 'Recipe Updated') 
+        else:
+            update_form = RecipeForm(instance=recipe)
+            messages.error(request, 'Your Recipe has not been Updated')
+     
+        return HttpResponseRedirect(reverse('recipe'))
