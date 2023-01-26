@@ -24,7 +24,7 @@ class Home(View):
 
 
 class Profile(View):
-    
+
     def get(self, request, *args, **kwargs):
         my_recipes = Recipe.objects.filter(author=request.user)
         return render(
@@ -104,11 +104,11 @@ class UpdateRecipeView(View):
         if update_form.is_valid():
             update_form.clean()
             update_form.save()
-            messages.success(request, 'Recipe Updated') 
+            messages.success(request, 'Recipe Updated')
         else:
             update_form = RecipeForm(instance=recipe)
             messages.error(request, 'Your Recipe has not been Updated')
-     
+
         return HttpResponseRedirect(reverse('recipe'))
 
 
@@ -123,3 +123,14 @@ class Recipes(View):
                 'recipe': recipe,
             }
         )
+
+
+class DeleteRecipeView(View):
+
+    def post(self, request, id, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, id=id)
+
+        recipe.delete()
+        messages.success(request, 'Your recipe has been deleted')
+
+        return HttpResponseRedirect(reverse('recipe'))
