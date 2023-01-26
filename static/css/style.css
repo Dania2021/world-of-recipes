@@ -114,6 +114,7 @@ footer p{
 @media screen and (min-width: 320px) {
     .btn-dark {
         margin-left: 95px;
+        font-size: 70%;
     }
     footer p {
         font-size: 55%;
@@ -132,6 +133,7 @@ footer p{
 @media screen and (min-width: 425px) {
     .btn-dark {
         margin-left: 150px;
+        font-size: 85%;
     }
     footer p {
         font-size: 75%;
