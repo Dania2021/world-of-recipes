@@ -15,7 +15,7 @@
                    <form action="{% url 'recipe_edit' recipe.id %}" class="ms-4 mt-3" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ update_form|crispy }}
-                       <button type="submit" class="btn btn-dark">Update</button>
+                       <button type="submit" class="btn btn-dark" aria-label="Update recipe">Update</button>
                    </form>
                     {% else %}
                     <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>

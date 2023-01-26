@@ -16,7 +16,7 @@
                             
                         {% csrf_token %}
                         {{ add_form|crispy }}
-                           <button type="submit" class="btn btn-dark">Submit</button>
+                           <button type="submit" class="btn btn-dark" aria-label="Add a recipe">Submit</button>
                       </form>
                       {% else %}
                       <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>
