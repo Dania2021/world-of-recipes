@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from .models import Recipe
-from .forms import RecipeForm
+from .models import Recipe, Comment
+from .forms import RecipeForm, CommentForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -44,14 +44,45 @@ class RecipeDetail(View):
         recipe_detail = Recipe.objects.all()
         recipe = get_object_or_404(recipe_detail, id=id)
         comments = recipe.comments.filter(approved=True)
+        comment_form = CommentForm()
         return render(
             request,
             'recipe_detail.html',
             {
                 'recipe': recipe,
-                'comments': comments
+                'comments': comments,
+                'comment_form': comment_form,
             },
         )
+
+    def post(self, request, id, *args, **kwargs):
+        recipe_detail = Recipe.objects.all()
+        recipe = get_object_or_404(recipe_detail, id=id)
+        comments = recipe.comments.filter(approved=True)
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.recipe = recipe
+            comment.save()
+            messages.success(request, 'Comment Added')
+            return redirect('recipe_detail', id=id)
+        else:
+            comment_form = CommentForm()
+            messages.error(
+                request, 'There was an error submitting your comment.')
+
+        return render(
+            request,
+            'recipe_detail.html',
+            {
+                'recipe': recipe,
+                'comments': comments,
+                'comment_form': comment_form,
+            },
+        )    
 
 
 class AddRecipeView(View):
