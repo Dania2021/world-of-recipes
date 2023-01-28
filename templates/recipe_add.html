@@ -10,9 +10,9 @@
          <div class="col-md-6">
               
                   {% if user.is_authenticated %}
-                   <h2>Add a recipe</h2>
+                   <h2 class="text-center">Add a recipe</h2>
                    <div class="card-panel">
-                     <form method="POST" class="ms-4 mt-3" action="{% url 'recipe_add' %}" enctype="multipart/form-data">           
+                     <form method="POST" class="ms-3 mt-3 pe-3 fw-bold" action="{% url 'recipe_add' %}" enctype="multipart/form-data">           
                             
                         {% csrf_token %}
                         {{ add_form|crispy }}

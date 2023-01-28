@@ -10,9 +10,9 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                  {% if user.is_authenticated %}
-                 <h2>Update a recipe</h2>
+                 <h2 class="text-center">Update a recipe</h2>
                  <div class="card-panel">
-                   <form action="{% url 'recipe_edit' recipe.id %}" class="ms-4 mt-3" method="POST" enctype="multipart/form-data">
+                   <form action="{% url 'recipe_edit' recipe.id %}" class="ms-3 mt-3 pe-3 fw-bold" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ update_form|crispy }}
                        <button type="submit" class="btn btn-dark" aria-label="Update recipe">Update</button>

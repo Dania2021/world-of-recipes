@@ -6,12 +6,12 @@
  <div class="masthead">
      <div class="container-fluid mb-5">
           <div class="row justify-content-center">
-            <!--To view recipe-->
+               <!--To view recipe-->
                <div class="col-md-6">
                     {% if user.is_authenticated %}
                     <div class="card-panel">
-                             <div class="card-body ps-5 px-5 mt-4 mb-4">
-                               <div class="recipe-img-container">
+                          <div class="container mt-4 mb-4">
+                             
                                   {% if 'placeholder' in recipe.recipe_image.url %}
                                   <img class="card-img-top" width="300px" height="300px"
                                   src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
@@ -19,8 +19,7 @@
                                   <img class="card-img-top" width="300px" height="300px"
                                   src="{{ recipe.recipe_image.url }}">
                                   {% endif %}
-                               </div>
-                         </div> 
+                          </div> 
                           <div class="text-center">
                               <p><span class="fw-bold">Title:</span> {{ recipe.title }}</p>
                               <p><span class="fw-bold">By {{ recipe.author }}</span></p>
