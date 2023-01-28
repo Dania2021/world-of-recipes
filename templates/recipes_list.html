@@ -11,7 +11,7 @@
                <div class="row">
                   {% for recipe in recipe_list %}
                   <div class="col-md-4">
-                      <div class="card mb-4">
+                      <div class="card border-dark mb-4">
                           <div class="card-body">
                               <div class="recipe-img-container">
                                   {% if 'placeholder' in recipe.recipe_image.url %}
@@ -26,7 +26,7 @@
                                   </div>  
                              </div>
                                <a href="{%  url 'recipe_detail' recipe.id %}">
-                                 <h2 class="card-title">{{ recipe.title }}</h2>
+                                 <p class="card-title">{{ recipe.title }}</p>
                                </a>
                               <hr>
                              <p class="card-date">{{ recipe.created_on }}</p>

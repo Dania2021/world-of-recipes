@@ -109,6 +109,12 @@ footer p{
     margin-bottom: 20px;
 }
 
+/***********************Prev & Next Button styling***************/
+.page-link {
+    background-color: #000;
+    color: #ffff;
+}
+
 /*******************************Media queries************/
 @media screen and (min-width: 320px) {
     .btn-dark {
