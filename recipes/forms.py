@@ -1,4 +1,4 @@
-from .models import Recipe
+from .models import Recipe, Comment
 from django import forms
 from django.forms import ModelForm
 
@@ -29,3 +29,11 @@ class RecipeForm(forms.ModelForm):
             {'placeholder': 'e.g. 6...'})
         self.fields['duration'].widget.attrs.update(
             {'placeholder': 'e.g. 60...'})
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        # Associate the form with Comment model and specify which fields to
+        # display
+        model = Comment
+        fields = ('body',)
