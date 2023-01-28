@@ -3,7 +3,15 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-SKILL_LEVEL = ((0, 'Beginners'), (1, 'Intermediate'), (2, 'Advanced'))
+BEGINNER = 'Beginner'
+INTERMEDIATE = 'Intermediate'
+ADVANCED = 'Advanced'
+
+SKILL_LEVEL = [
+    (BEGINNER, 'Beginner'),
+    (INTERMEDIATE, 'Intermediate'),
+    (ADVANCED, 'Advanced')
+]
 
 
 class Recipe(models.Model):
@@ -54,9 +62,10 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     recipe_image = CloudinaryField('image', default='placeholder')
     steps = models.TextField()
-    serves = models.IntegerField()
-    duration = models.IntegerField()
-    skill_level = models.IntegerField(choices=SKILL_LEVEL, default=0)
+    serves = models.PositiveIntegerField()
+    duration = models.PositiveIntegerField()
+    skill_level = models.CharField(
+        max_length=30, choices=SKILL_LEVEL, default=BEGINNER)
     cuisine_name = models.CharField(
         max_length=30, choices=CUISINE_CHOICES, default=AMERICAN)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -81,7 +90,7 @@ class Comment(models.Model):
         Recipe, on_delete=models.CASCADE, related_name='comments')
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
 
     class Meta:
         '''
