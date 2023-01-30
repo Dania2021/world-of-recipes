@@ -58,9 +58,10 @@ SITE_ID = 1
 
 ACCOUNT_EMAIL_VERIFICATION = None
 
-# Redirection for login and logout
+# Redirection for signup, login and logout
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_SIGNUP_REDIRECT_URL = '/profile/'
 
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
