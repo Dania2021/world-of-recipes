@@ -1,4 +1,4 @@
-from .models import Recipe, Comment
+from .models import Recipe, Comment, Profile
 from django import forms
 from django.forms import ModelForm
 
@@ -37,3 +37,11 @@ class CommentForm(forms.ModelForm):
         # display
         model = Comment
         fields = ('body',)
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        # Associate the form with Profile model and specify which fields to
+        # display
+        model = Profile
+        fields = ['first_name', 'last_name', 'profile_image']
