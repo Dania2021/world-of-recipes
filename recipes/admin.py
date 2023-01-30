@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe, Comment
+from .models import Recipe, Comment, Profile
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -22,3 +22,11 @@ class CommentAdmin(admin.ModelAdmin):
 
     def comments_approved(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+
+    list_display = ('user', 'first_name', 'email')
+    search_fields = ['user', 'email']
+    list_filter = ('user',)
