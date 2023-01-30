@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="masthead">
+    <div class="container-fluid mb-5">
+       <div class="row justify-content-center">
+        <!--To create a Profile-->
+         <div class="col-md-6">
+              <h2 class="text-center">Add your Profile</h2>
+              <div class="card-panel">
+                  <form method="POST" class="ms-3 mt-3 pe-3 fw-bold" enctype="multipart/form-data" action="{% url 'profile' %}">
+                     {% csrf_token %}
+                     {{ profile_form|crispy }}
+                     <p>Email</p>
+                     <p>{{ user.email }}</p>
+                     <button type="submit" class="btn btn-dark" aria-label="Add a profile">Submit</button>
+                  </form>
+               </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
