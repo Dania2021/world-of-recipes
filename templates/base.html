@@ -24,31 +24,31 @@
      <!--Navigation menu-->
     <nav class="navbar navbar-expand-md navbar-bg navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <h1>World of Recipes</h1>
-            </a>
-            <!--Toggle button for mobile devices with small screens-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" 
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                    <div class="collapse navbar-collapse" id="navbarToggleContent">
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!--Logo-->
+              <a class="navbar-brand" href="{% url 'home' %}">
+                  <h1>World of Recipes</h1>
+              </a>
+               <!--Toggle button for mobile devices with small screens-->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggleContent" aria-controls="navbarToggleContent" aria-expanded="false" 
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarToggleContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                          <li class="nav-item">
                              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                          </li>
-                         {% if user.is_authenticated %}
-                         
                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'recipes_list' %}">Recipes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'recipe' %}">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                        </li>
+                             <a class="nav-link" href="{% url 'recipes_list' %}">Recipes</a>
+                         </li>
+                         {% if user.is_authenticated %}
+                         <li class="nav-item">
+                             <a class="nav-link" href="{% url 'recipe' %}">Profile</a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                         </li>
                          {% else %}
                          <li class="nav-item">
                              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
@@ -57,11 +57,12 @@
                              <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
                          </li>
                          {% endif %}
-                        </ul>
-                    </div>
-             </div>
+                     </ul>
+                </div>
+         </div>
     </nav>
     
+    <!--To display message-->
     {% if messages %}
     {% for message in messages %}
     <div class="alert {{ message.tags }} alert-dismissable fade show text-center rounded" id="msg"
@@ -81,24 +82,24 @@
     <footer class="bg-color fixed-bottom">
         <div class="container-fluid three-container">
              <div class="row">
-                <div class="col pt-1">
-                   <p>Copyright &copy; 2023 WorldOfRecipes</p>
-               </div>
-        <div class="col pt-2" id="social-media-link">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Facebook page (open in a new tab)">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Instagram page (open in a new tab)">
-              <i class="fab fa-instagram-square"></i>
-            </a>
-            <a href="https://www.twitter.com/" target="_blank" rel="noopener"
-              aria-label="Visit our Twitter page (open in a new tab)">
-              <i class="fab fa-twitter-square"></i>
-            </a>
-        </div>
-        </div>
+                  <div class="col pt-1">
+                      <p>Copyright &copy; 2023 WorldOfRecipes</p>
+                  </div>
+                  <div class="col pt-2" id="social-media-link">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                          aria-label="Visit our Facebook page (open in a new tab)">
+                          <i class="fab fa-facebook-square"></i>
+                       </a>
+                       <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                          aria-label="Visit our Instagram page (open in a new tab)">
+                          <i class="fab fa-instagram-square"></i>
+                       </a>
+                       <a href="https://www.twitter.com/" target="_blank" rel="noopener"
+                           aria-label="Visit our Twitter page (open in a new tab)">
+                           <i class="fab fa-twitter-square"></i>
+                      </a>
+                  </div>
+             </div>
     </footer>
 
     <!-- Boot strap JavaScript link -->
