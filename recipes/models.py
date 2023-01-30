@@ -57,6 +57,7 @@ class Recipe(models.Model):
     ]
 
     title = models.CharField(max_length=200, unique=True)
+    recipe_created = models.BooleanField(default=False)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='recipe_posts')
     ingredients = models.TextField()
@@ -100,3 +101,18 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment by {self.author} on Recipe {self.recipe}'
+
+
+class Profile(models.Model):
+    '''
+    To create a user profile
+    '''
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, null=True, blank=True)
+    profile_image = CloudinaryField('image', default='placeholder')
+    first_name = models.CharField(max_length=50, null=True, blank=True)
+    last_name = models.CharField(max_length=50, null=True, blank=True)
+    email = models.EmailField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.user} profile'
