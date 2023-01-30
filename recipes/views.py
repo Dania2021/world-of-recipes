@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from .models import Recipe, Comment
-from .forms import RecipeForm, CommentForm
+from .models import Recipe, Comment, Profile
+from .forms import RecipeForm, CommentForm, ProfileForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -24,9 +24,11 @@ class Home(View):
 
 
 class Profile(View):
-
+    
     def get(self, request, *args, **kwargs):
+
         my_recipes = Recipe.objects.filter(author=request.user)
+
         return render(
             request,
             'recipe.html',
@@ -82,7 +84,7 @@ class RecipeDetail(View):
                 'comments': comments,
                 'comment_form': comment_form,
             },
-        )    
+        )
 
 
 class AddRecipeView(View):
@@ -165,3 +167,31 @@ class DeleteRecipeView(View):
         messages.success(request, 'Your recipe has been deleted')
 
         return HttpResponseRedirect(reverse('recipe'))
+
+
+class ProfileAddView(View):
+
+    def get(self, request):
+        profile_form = ProfileForm()
+
+        return render(
+            request,
+            'profile.html',
+            {
+                'profile_form': profile_form,
+            },
+        )
+
+    def post(self, request):
+        profile_form = ProfileForm(request.POST, request.FILES)
+
+        if profile_form.is_valid():
+            profile_form.instance.email = request.user.email
+            profile_form.save()
+            messages.success(request, 'Profile Added Successfully')
+        else:
+            recipe_form = RecipeForm()
+            messages.error(
+                request, 'There was an error submitting your profile.')
+
+        return HttpResponseRedirect(reverse('home'))
