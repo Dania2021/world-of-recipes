@@ -19,7 +19,7 @@ urlpatterns = [
         'recipe_edit/<int:id>/',
         views.UpdateRecipeView.as_view(), name='recipe_edit'),
     path(
-        'recipes/',
+        'recipes/<int:id>/',
         views.Recipes.as_view(), name='recipes'),
     path(
         'recipe_delete/<int:id>/',
