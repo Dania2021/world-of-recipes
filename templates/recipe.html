@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <div class="masthead">
     <div class="container-fluid mb-5">
       
         <div class="row justify-content-center">
-          <div class="col-md-6">
+          <div class="col-md-4">
             {% if user.is_authenticated %}
                    
                    <a href="{% url 'recipe_add' %}" class="btn btn-dark">Add Recipe <i class="fa-light fa-plus"></i></a>
@@ -14,21 +16,31 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card-panel">
-              <h2 class="ms-4 mt-1 text-center">My recipes</h2>
-              <br>
-              {% for recipe in my_recipes %}
-             <div>
-                <p class="author ms-4">Author: {{ recipe.author }}</p>
-                <a href="{% url 'recipes' recipe.id %}">
-                <p class="card-title ms-4">{{ recipe.title }}</p></a>
-              </div>
-              <hr>
-              {% endfor %}
-            </div>
-          </div>
+          
+              <div class="col-md-4">
+                <div class="card-panel">
+                  <h2 class="ms-4 mt-1 text-center">My recipes</h2>
+                  <br>
+                  {% if my_recipes %}
+                    {% for recipe in my_recipes %}
+                    
+                 <div class="card ms-2 mx-2 mb-2">
+                    <p class="author ms-4 mt-2">Author: {{ recipe.author }}</p>
+                    <a href="{% url 'recipes' recipe.id %}">
+                    <p class="card-title ms-4">{{ recipe.title }}</p></a>
+                  </div>
+                  
+                  {% endfor %} 
+                 {% else %}
+                
+                </div>
+                <div class="ms-2"><h4 class="mt-2 text-center">You have not created any recipe yet!</h4></div>
+                {% endif %}
+              </div>    
+          
+          
         </div>
       </div>              
+ 
  </div>
 {% endblock %}
