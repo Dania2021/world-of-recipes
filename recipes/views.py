@@ -23,10 +23,11 @@ class Home(View):
         )
 
 
-class Profile(View):
-    
-    def get(self, request, *args, **kwargs):
-
+class ProfileView(View):
+    '''
+    To view my profile and my recipes
+    '''
+    def get(self, request):
         my_recipes = Recipe.objects.filter(author=request.user)
 
         return render(
@@ -172,7 +173,8 @@ class DeleteRecipeView(View):
 class ProfileAddView(View):
 
     def get(self, request):
-        profile_form = ProfileForm()
+        profile = get_object_or_404(Profile, user=request.user)
+        profile_form = ProfileForm(instance=profile)
 
         return render(
             request,
@@ -183,15 +185,17 @@ class ProfileAddView(View):
         )
 
     def post(self, request):
-        profile_form = ProfileForm(request.POST, request.FILES)
+        profile = get_object_or_404(Profile, user=request.user)
+        profile_form = ProfileForm(
+            request.POST, request.FILES, instance=profile)
 
         if profile_form.is_valid():
             profile_form.instance.email = request.user.email
             profile_form.save()
             messages.success(request, 'Profile Added Successfully')
         else:
-            recipe_form = RecipeForm()
+            profile_form = ProfileForm()
             messages.error(
                 request, 'There was an error submitting your profile.')
 
-        return HttpResponseRedirect(reverse('home'))
+        return HttpResponseRedirect(reverse('recipe'))
