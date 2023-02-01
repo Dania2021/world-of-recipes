@@ -44,5 +44,4 @@ class ProfileForm(forms.ModelForm):
         # Associate the form with Profile model and specify which fields to
         # display
         model = Profile
-        fields = [
-            'user', 'profile_first_name', 'profile_last_name', 'profile_image']
+        fields = ['profile_first_name', 'profile_last_name', 'profile_image']
