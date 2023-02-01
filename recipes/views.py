@@ -25,9 +25,11 @@ class Home(View):
 
 class ProfileView(View):
     '''
-    To view my profile and my recipes
+    To render the user profile with user's recipes
     '''
     def get(self, request):
+        profile_queryset = Profile.objects.filter(user=request.user)
+        profile = get_object_or_404(profile_queryset)
         my_recipes = Recipe.objects.filter(author=request.user)
 
         return render(
@@ -35,6 +37,7 @@ class ProfileView(View):
             'recipe.html',
             {
                 'my_recipes': my_recipes,
+                'profile': profile,
             },
         )
 
