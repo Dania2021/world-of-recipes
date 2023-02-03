@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from .models import Recipe, Comment, Profile
-from .forms import RecipeForm, CommentForm, ProfileForm
+from .forms import RecipeForm, CommentForm, ProfileForm, ProfileEditForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -200,5 +200,36 @@ class ProfileAddView(View):
             profile_form = ProfileForm()
             messages.error(
                 request, 'There was an error submitting your profile.')
+
+        return HttpResponseRedirect(reverse('recipe'))
+
+
+class ProfileEditView(View):
+
+    def get(self, request, id):
+        profile = get_object_or_404(Profile, id=id)
+        update_profile = ProfileEditForm(instance=profile)
+
+        return render(
+            request,
+            'edit_profile.html',
+            {
+                'profile': profile,
+                'update_profile': update_profile,
+            }
+        )
+
+    def post(self, request, id):
+        profile = get_object_or_404(Profile, id=id)
+        update_profile = ProfileEditForm(
+            request.POST, request.FILES, instance=profile)
+
+        if update_profile.is_valid():
+            update_profile.clean()
+            update_profile.save()
+            messages.success(request, 'Profile Updated successfully')
+        else:
+            update_profile = ProfileEditForm(instance=profile)
+            messages.error(request, 'Your profile has not updated')
 
         return HttpResponseRedirect(reverse('recipe'))
