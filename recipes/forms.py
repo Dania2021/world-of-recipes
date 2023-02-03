@@ -45,3 +45,13 @@ class ProfileForm(forms.ModelForm):
         # display
         model = Profile
         fields = ['profile_first_name', 'profile_last_name', 'profile_image']
+
+
+class ProfileEditForm(forms.ModelForm):
+    class Meta:
+        # Associate the form with Profile model and specify which fields to
+        # display to update user profile
+        model = Profile
+        fields = [
+            'user', 'profile_first_name', 'profile_last_name',
+            'profile_image', 'email']
