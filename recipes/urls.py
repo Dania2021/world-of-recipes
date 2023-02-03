@@ -25,4 +25,7 @@ urlpatterns = [
         'recipe_delete/<int:id>/',
         views.DeleteRecipeView.as_view(), name='recipe_delete'),
     path('profile/', views.ProfileAddView.as_view(), name='profile'),
-]
+    path(
+        'edit_profile/<int:id>/',
+        views.ProfileEditView.as_view(), name='edit_profile'),
+        ]
