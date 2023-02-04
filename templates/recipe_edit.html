@@ -6,24 +6,34 @@
 
 
  <div class="masthead">
-    <div class="container-fluid mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                 {% if user.is_authenticated %}
-                 <h2 class="text-center">Update a recipe</h2>
-                 <div class="card-panel">
-                   <form action="{% url 'recipe_edit' recipe.id %}" class="ms-3 mt-3 pe-3 fw-bold" method="POST" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ update_form|crispy }}
-                       <button type="submit" class="btn btn-dark" aria-label="Update recipe">Update</button>
-                   </form>
-                    {% else %}
-                    <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>
-                    {% endif %}
-               </div>
+      <div class="container-fluid mb-5 bg-color4">
+            <div class="row justify-content-center">
+                  <!--To update a recipe-->
+                  <div class="col-md-6 mt-3">
+                       {% if user.is_authenticated %}
+                       <h2 class="text-center fw-bold text-col1">Update a recipe</h2>
+                       <div class="card-panel mb-5 bg-color3">
+                           <form action="{% url 'recipe_edit' recipe.id %}" class="ms-3 mt-3 pe-3 fw-bold text-col2" method="POST" enctype="multipart/form-data">
+                                 {% csrf_token %}
+                                 {{ update_form|crispy }}
+                                 <div class="row">
+                                     <div class="col text-center">
+                                          <button type="submit" class="btn btn bg-color4 text-col1" aria-label="Update recipe">Update</button>
+                                     </div>
+                                      <div class="col">
+                                          <a href="{% url 'recipe' %}" class="btn btn bg-color4 text-col1 mb-2 me-4" aria-label="Cancel">
+                                              Cancel
+                                           </a>
+                                     </div>
+                                </div>
+                           </form>
+                                 {% else %}
+                           <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>
+                                {% endif %}
+                        </div>
+                 </div>
             </div>
-          </div>
        </div>
-  </div>
+ </div>
 
 {% endblock %}
