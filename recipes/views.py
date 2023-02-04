@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from .models import Recipe, Comment, Profile
-from .forms import RecipeForm, CommentForm, ProfileForm, ProfileEditForm
+from .forms import RecipeForm, CommentForm, ProfileForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -193,7 +193,6 @@ class ProfileAddView(View):
             request.POST, request.FILES, instance=profile)
 
         if profile_form.is_valid():
-            profile_form.instance.email = request.user.email
             profile_form.save()
             messages.success(request, 'Profile Added Successfully')
         else:
@@ -206,9 +205,9 @@ class ProfileAddView(View):
 
 class ProfileEditView(View):
 
-    def get(self, request, id):
-        profile = get_object_or_404(Profile, id=id)
-        update_profile = ProfileEditForm(instance=profile)
+    def get(self, request):
+        profile = get_object_or_404(Profile, user=request.user)
+        update_profile = ProfileForm(instance=profile)
 
         return render(
             request,
@@ -219,17 +218,19 @@ class ProfileEditView(View):
             }
         )
 
-    def post(self, request, id):
-        profile = get_object_or_404(Profile, id=id)
-        update_profile = ProfileEditForm(
-            request.POST, request.FILES, instance=profile)
+    def post(self, request):
+        profile_queryset = Profile.objects.filter(user=request.user)
+        get_object_or_404(profile_queryset)
+        profile = profile_queryset.first()
+        update_profile = ProfileForm(
+            request.POST, request.FILES, instance=request.user.profile)
 
         if update_profile.is_valid():
             update_profile.clean()
             update_profile.save()
             messages.success(request, 'Profile Updated successfully')
         else:
-            update_profile = ProfileEditForm(instance=profile)
+            update_profile = ProfileEditForm(instance=request.user.profile)
             messages.error(request, 'Your profile has not updated')
 
         return HttpResponseRedirect(reverse('recipe'))
