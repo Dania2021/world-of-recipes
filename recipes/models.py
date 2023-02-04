@@ -57,7 +57,6 @@ class Recipe(models.Model):
     ]
 
     title = models.CharField(max_length=200, unique=True)
-    recipe_created = models.BooleanField(default=False)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='recipe_posts')
     ingredients = models.TextField()
@@ -112,7 +111,6 @@ class Profile(models.Model):
     profile_image = CloudinaryField('image', default='placeholder')
     profile_first_name = models.CharField(max_length=50, null=True, blank=True)
     profile_last_name = models.CharField(max_length=50, null=True, blank=True)
-    email = models.EmailField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return f'{self.user} profile'
