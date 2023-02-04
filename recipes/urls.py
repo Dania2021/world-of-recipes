@@ -26,6 +26,6 @@ urlpatterns = [
         views.DeleteRecipeView.as_view(), name='recipe_delete'),
     path('profile/', views.ProfileAddView.as_view(), name='profile'),
     path(
-        'edit_profile/<int:id>/',
+        'edit_profile/',
         views.ProfileEditView.as_view(), name='edit_profile'),
         ]
