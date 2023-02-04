@@ -5,18 +5,27 @@
 {% block content %}
 
 <div class="masthead">
-    <div class="container-fluid mb-5">
+    <div class="container-fluid mb-5 bg-color4">
        <div class="row justify-content-center">
-         <div class="col-md-6">
-              
-                  {% if user.is_authenticated %}
-                   <h2 class="text-center">Add a recipe</h2>
-                   <div class="card-panel">
-                     <form method="POST" class="ms-3 mt-3 pe-3 fw-bold" action="{% url 'recipe_add' %}" enctype="multipart/form-data">           
+         <div class="col-md-6 mt-4">
+              <!--To Add Recipe-->
+              {% if user.is_authenticated %}
+              <h2 class="text-center item-col2 fw-bold text-col1">Add a recipe</h2>
+                   <div class="card-panel bg-color3 mb-5">
+                     <form method="POST" class="ms-3 mt-3 pe-3 fw-bold text-col2" action="{% url 'recipe_add' %}" enctype="multipart/form-data">           
                             
                         {% csrf_token %}
                         {{ add_form|crispy }}
-                           <button type="submit" class="btn btn-dark" aria-label="Add a recipe">Submit</button>
+                        <div class="row">
+                           <div class="col text-center">
+                              <button type="submit" class="btn btn bg-color4 text-col1 mb-2" aria-label="Add a recipe">Add</button>
+                           </div>
+                           <div class="col">
+                              <a href="{% url 'recipe' %}" class="btn btn bg-color4 text-col1 mb-2 me-4">
+                                  Cancel
+                               </a>
+                           </div>
+                        </div>
                       </form>
                       {% else %}
                       <h3 class="mb-3">Sorry, you are not allowed to access this page.</h3>
