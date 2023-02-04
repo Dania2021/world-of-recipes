@@ -52,6 +52,7 @@
                 <div class="card-panel bg-color3 mb-5">
                      <h2 class="ms-4 mt-1 text-center text-col2">My recipes</h2>
                       <br>
+                      {% if my_recipes %}
                       {% for recipe in my_recipes %}
                     
                       <div class="card ms-2 mx-2 mb-3">
@@ -61,7 +62,14 @@
                       </div>
                   
                       {% endfor %}
+                      {% else %}
+                      <!--Display a message if there is no recipe added-->
+                      <div class="bg-color3 item-col3 p-2 mt-2">
+                         <h4 class="mt-2 text-center text-col2">You have not created any recipe yet!</h4>
+                         <p class="text-center text-col2">Click the below button to upload your recipe</p>
+                      </div>
                 </div>
+                      {% endif %}
                      
                 <div class="row justify-content-center">
                      <div class="col-md-6 text-center mb-5">
