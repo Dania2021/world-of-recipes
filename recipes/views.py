@@ -5,6 +5,7 @@ from .forms import RecipeForm, CommentForm, ProfileForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth import logout
 
 
 class RecipeList(generic.ListView):
@@ -193,6 +194,7 @@ class ProfileAddView(View):
             request.POST, request.FILES, instance=profile)
 
         if profile_form.is_valid():
+            profile_form.instance.user = request.user
             profile_form.save()
             messages.success(request, 'Profile Added Successfully')
         else:
@@ -234,3 +236,13 @@ class ProfileEditView(View):
             messages.error(request, 'Your profile has not updated')
 
         return HttpResponseRedirect(reverse('recipe'))
+
+
+class ProfileDeleteView(View):
+
+    def post(self, request):
+        profile = get_object_or_404(Profile, user=request.user)
+        profile.delete()
+        messages.success(request, 'Your Profile Deleted successfully')
+        logout(request)
+        return HttpResponseRedirect(reverse('home'))
