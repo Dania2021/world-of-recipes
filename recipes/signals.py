@@ -1,8 +1,7 @@
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.contrib.auth.models import User
 from django.dispatch import receiver
-
-from .models import Profile
+from .models import Profile, Recipe, Comment
 
 
 @receiver(post_save, sender=User)
@@ -19,7 +18,13 @@ def save_profile(sender, instance, **kwargs):
     '''
     To save a user profile when new user is created
     '''
-    try:
-        instance.profile.save()
-    except ObjectDoesNotExist:
-        Profile.objects.create(user=instance)
+    instance.profile.save()
+
+
+@receiver(post_delete, sender=Profile)
+def delete_profile(sender, instance, **kwargs):
+    '''
+    To delete recipe and comments when profile is deleted
+    '''
+    Recipe.objects.filter(author=instance.user).delete()
+    Comment.objects.filter(author=instance.user).delete()
