@@ -225,7 +225,7 @@ class ProfileEditView(View):
         get_object_or_404(profile_queryset)
         profile = profile_queryset.first()
         update_profile = ProfileForm(
-            request.POST, request.FILES, instance=request.user.profile)
+            request.POST, request.FILES, instance=profile)
 
         if update_profile.is_valid():
             update_profile.clean()
@@ -241,8 +241,8 @@ class ProfileEditView(View):
 class ProfileDeleteView(View):
 
     def post(self, request):
-        profile = get_object_or_404(Profile, user=request.user)
-        profile.delete()
+        user = request.user
+        user.delete()
         messages.success(request, 'Your Profile Deleted successfully')
         logout(request)
         return HttpResponseRedirect(reverse('home'))
