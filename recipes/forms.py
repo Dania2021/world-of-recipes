@@ -21,8 +21,8 @@ class RecipeForm(forms.ModelForm):
         self.fields['title'].widget.attrs.update(
             {'placeholder': 'Add Recipe name...'})
         self.fields['ingredients'].widget.attrs.update(
-            {'placeholder': 'Use comma to separate items.'
-             'Eg 50g oil, 50g flour, ..'})
+            {'placeholder': 'Use a new line to add each item..'
+             'Eg 50g flour'})
         self.fields['steps'].widget.attrs.update(
             {'placeholder': 'Use a new line to add each step'})
         self.fields['serves'].widget.attrs.update(
@@ -45,13 +45,3 @@ class ProfileForm(forms.ModelForm):
         # display
         model = Profile
         fields = ['profile_first_name', 'profile_last_name', 'profile_image']
-
-
-class ProfileEditForm(forms.ModelForm):
-    class Meta:
-        # Associate the form with Profile model and specify which fields to
-        # display to update user profile
-        model = Profile
-        fields = [
-            'user', 'profile_first_name', 'profile_last_name',
-            'profile_image', 'email']
