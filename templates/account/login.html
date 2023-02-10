@@ -18,7 +18,7 @@
             <p class="text-center text-col1 fw-bold">{% blocktrans %}Please
               <a href="{{ signup_url }}" class="fw-bold">Sign up</a> if you don't have an account yet.{% endblocktrans %}
             </p>
-            <div class="card-panel mt-3 bg-color3 text-col2">
+            <div class="card-panel mb-5 bg-color3 text-col2">
               <form class="login ms-3 mt-3 pe-3 fw-bold item-col2" method="POST" action="{% url 'account_login' %}">
                   {% csrf_token %}
                   {{ form|crispy }}
@@ -26,7 +26,7 @@
                   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                   {% endif %}
                   <div class="text-center">
-                  <button class="btn bg-color4 text-col1 fw-bold m-2" type="submit">{% trans "Login" %}</button>
+                  <button class="btn bg-color4 text-col1 fw-bold m-2" type="submit" aria-label="login">{% trans "Login" %}</button>
                   </div>
                </form>
                

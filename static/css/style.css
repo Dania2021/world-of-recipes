@@ -1,5 +1,5 @@
 /* Google Font import */
-@import url('https://fonts.googleapis.com/css2?family=Fredokawght@600&family=Robotowght@300');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Roboto:wght@300');
 
 * {
     padding: 0;
@@ -15,7 +15,7 @@ body {
 
 /*********************Navbar******/
 .navbar {
-    background-color: #000;
+    background-color: #299617;
 }
 
 .navbar-brand {
@@ -29,15 +29,10 @@ body {
 .nav-item {
     font-size: large;
     align-items: center;
-}
-
-/*********************Footer******/
-.bg-color {
-    background-color: #000;
-    height: 80px;
     
 }
 
+/*********************Footer******/
 footer p{
     color: #ffff;
     padding-top: 30px;
@@ -58,7 +53,7 @@ footer p{
 /********************************Background image****/
 .hero-img {
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     
     background: url('../images/green-img.webp');
     background-size: cover;
@@ -70,16 +65,6 @@ footer p{
     position: relative;
 }
 
-.image-container {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-}
-
 /****************Cover text styling******/
 .cover-text {
     background-color: rgba(0, 0, 0, 0.5);
@@ -89,13 +74,11 @@ footer p{
     z-index: 2;
 }
 
-/****************Three cards styling*******/
-.three-cards {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+/**********************Divider*************/
+.divider {
+    border: #000 1px solid;
 }
-
+/****************cards styling*******/
 .card-panel {
     border: solid 2px #000;
 }
@@ -105,68 +88,77 @@ footer p{
 }
 
 /*****************************Button styling*************/
-.btn-dark {
-    margin-bottom: 20px;
+.btn {
+    border-color: #000000;
+}
+
+.btn:hover {
+    border-color: #fee277;
+    color: #fee277;
+    background-color: #299617;
 }
 
 /***********************Prev & Next Button styling***************/
 .page-link {
-    background-color: #000;
-    color: #ffff;
+    background-color: #fee277;
+    color: #299617;
 }
 
 /*******************************Media queries************/
 @media screen and (min-width: 320px) {
-    .btn-dark {
-        margin-left: 95px;
-        font-size: 70%;
-    }
     footer p {
         font-size: 55%;
     }
 }
 
 @media screen and (min-width: 375px) {
-    .btn-dark {
-        margin-left: 120px;
-    }
     footer p {
         font-size: 65%;
     }
 }
 
 @media screen and (min-width: 425px) {
-    .btn-dark {
-        margin-left: 150px;
-        font-size: 85%;
-    }
     footer p {
         font-size: 75%;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .btn-dark {
-        margin-left: 80px;
-    }
     footer p {
         font-size: 85%;
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .btn-dark {
-        margin-left: 120px;
-    }
-}
-
-/***********************recipe_detail & recipes_list styling****/ 
+/***********************styling on all pages****/ 
 .masthead {
-    margin-top: 110px;
-    margin-bottom: 90px;
+    margin-top: 65px;
+    background: #fee277;
 }
 
 /***********************alert message styling******************/
-.alert {
-    margin-top: 90px;
+#msg {
+    margin-top: 100px;
+}
+
+/*************************text-colour***********************/
+.text-col1 {
+    color: #299617;
+}
+.text-col2 {
+    color: #ffff;
+}
+.text-col3 {
+    color: #fee277;
+}
+
+/***********************background colour****************************/
+.bg-color3 {
+    background: #299617;
+}
+.bg-color4 {
+    background: #fee277;
+}
+
+html {
+    background: #fee277;
 }
