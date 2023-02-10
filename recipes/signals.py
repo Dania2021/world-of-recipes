@@ -19,12 +19,3 @@ def save_profile(sender, instance, **kwargs):
     To save a user profile when new user is created
     '''
     instance.profile.save()
-
-
-@receiver(post_delete, sender=Profile)
-def delete_profile(sender, instance, **kwargs):
-    '''
-    To delete recipe and comments when profile is deleted
-    '''
-    Recipe.objects.filter(author=instance.user).delete()
-    Comment.objects.filter(author=instance.user).delete()
