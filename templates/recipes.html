@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% load static %}
 
 {% block content %}
@@ -9,51 +10,52 @@
                <!--To view recipe-->
                <div class="col-md-6">
                     {% if user.is_authenticated %}
-                    <div class="card-panel mb-3 mt-4 mb-5 bg-color3 text-col2">
-                          <div class="container mt-4 mb-4">
+                    <div class="card border-dark mb-4 mt-5 mb-5 text-col1">
+                         <div class="container mt-4 mb-4">
                              
-                                  {% if 'placeholder' in recipe.recipe_image.url %}
-                                  <img class="card-img-top" width="300px" height="300px"
-                                  src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                                  {% else %}
-                                  <img class="card-img-top" width="300px" height="300px"
-                                  src="{{ recipe.recipe_image.url }}">
-                                  {% endif %}
+                              {% if 'placeholder' in recipe.recipe_image.url %}
+                              <img class="card-img-top" alt="recipe-image-placeholder"
+                              src="{% static 'images/default-recipe.webp' %}">
+                              {% else %}
+                              <img class="card-img-top" alt="recipe-image"
+                              src="{{ recipe.recipe_image.url }}">
+                              {% endif %}
                           </div> 
-                          <div class="text-center">
+                          <div class="text-center pe-2 ps-2">
                               <p><span class="fw-bold">Title:</span> {{ recipe.title }}</p>
                               <p><span class="fw-bold">By {{ recipe.author }}</span></p>
-                              <p><span class="fw-bold">Ingredients:</span> {{ recipe.ingredients }}</p>
+                              <p><span class="fw-bold">Ingredients:</span> <br> {{ recipe.ingredients|linebreaksbr }}</p>
                               <p><span class="fw-bold">Serves:</span> {{ recipe.serves }}</p>
                               <p><span class="fw-bold">Duration(in minutes):</span> {{ recipe.duration }}</p>
                               <p><span class="fw-bold">Cuisine:</span> {{ recipe.cuisine_name }}</p>
                               <p><span class="fw-bold">Skill Level:</span> {{ recipe.skill_level }}</p>
-                              <p><span class="fw-bold">Steps:</span> {{ recipe.steps }}</p>
+                              <p><span class="fw-bold">Steps:</span><br>
+                                 {{ recipe.steps|linebreaksbr }}
+                              </p>
                            </div>
                     
                            <div class="row text-center">
-                                <!--Update recipe link-->
+                                <!--Update recipe-->
                                 <div class="col">
-                                    <a href="{% url 'recipe_edit' recipe.id %}" class="btn bg-color4 text-col1 fw-bold mt-4 m-2">
+                                    <a href="{% url 'recipe_edit' recipe.id %}" class="btn bg-color4 text-col1 fw-bold mt-4 m-2" aria-label="To update recipe">
                                       Update
                                     </a>
-                                  </div>
-                                {% endif %}
-                                  <div class="col">
+                                </div>
+                                <div class="col">
                                     <!--Form Recipe Deletion-->
                                     <form method="POST" action="{% url 'recipe_delete' recipe.id %}" id="recipe-delete">
                                        {% csrf_token %}
                                        <button type="button" class="btn bg-color4 text-col1 fw-bold mt-4 mx-4 m-2" aria-label="Delete recipe" data-bs-toggle="modal" data-bs-target="#modal-confirm-delete">
-                                         Delete
-                                        </button>
-                                     </form>
-                                  </div>
+                                          Delete
+                                      </button>
+                                    </form>
+                                </div>
                             </div>
                           
                             <!--Modal to delete a recipe-->
                            <div class="modal" tabindex="-1" id="modal-confirm-delete">
                               <div class="modal-dialog">
-                                <div class="modal-content bg-color3">
+                                <div class="modal-content">
                                    <div class="modal-header">
                                       <h3 class="modal-title">Delete Recipe</h3>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -70,6 +72,7 @@
                              </div>
                           </div>
                        </div>
+                       {% endif %}
                     </div>
                 </div>
           </div>
