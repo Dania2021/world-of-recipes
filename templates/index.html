@@ -3,47 +3,59 @@
 {% load static %}
 
 {% block content %}
-
-<div class="container-fluid hero-img mt-3">
-    
-        <div class="image-container">
-        </div>
-        <div class="cover-text"> 
-               <h2 class="lead">A place where you get all your favourite recipes</h2>
-        </div>
+<div class="masthead">
+   <div class="container-fluid hero-img">
+      <div class="cover-text"> 
+            <h2 class="lead m-2">A place where you get all your favourite recipes</h2>
+      </div>
     </div>
 
-<!--Three Cards-->    
-<div class="container-fluid three-cards mb-5">
-    <div class="row">
-        <div class="col-12 col-md-4 pt-3">
-              <div class="card-panel text-center">
-                 <p class="card-text">View the recipes of <br>
+  <div class="divider"></div>
+
+  <!--Quote-->
+
+  <div class="container-fluid">
+     <div class="row justify-content-center">
+          <div class="col-12 bg-color3">
+              <div class="fw-bold text-center text-col2">
+                   <p class="mt-3">"A recipe has no soul.<br>
+                        You as a cook, <br>
+                        must bring soul to recipe"<br>
+                        <br>
+                        Thomas Keller
+                   </p>
+             </div>
+          </div>
+      </div>
+    
+      <!--Two cards-->    
+      <div class="row bg-color4 justify-content-center">
+          <div class="divider"></div>
+          <!--View recipes-->
+          <div class="col-12 col-md-6 mt-3 mb-5">
+               <div class="card-panel text-center bg-light mb-5">
+                 <p class="card-text text-col1 fw-bold">View the recipes of <br>
                       different cuisines
                  </p>
-                   <a href="{% url 'recipes_list' %}" class="btn btn-dark ms-2">Recipes</a>
+                   <a href="{% url 'recipes_list' %}" class="btn text-col1 fw-bold ms-2 mb-2 bg-color4">View Recipe</a>
              </div>
-        </div>
-        <div class="col-12 col-md-4 pt-3">
-             <div class="card-panel text-center">
-                    <p class="card-text">"A recipe has no soul.<br>
-                          You as a cook, <br>
-                          must bring soul to recipe"<br>
-                          <br>
-                          Thomas Keller
+          </div>
+
+          <!--Upload recipe-->
+          <div class="col-12 col-md-6 mt-3 mb-5 bg-color4">
+              <div class="card-panel text-center bg-light mb-5">
+                    <p class="card-text text-col1 fw-bold">Upload recipes<br>
+                        to your profile
                     </p>
-                </div>
-        </div>
-        <div class="col-12 col-md-4 pt-3 mb-5">
-            <div class="card-panel text-center">
-                    <p class="card-text">Register for an account<br>
-                        add your recipes and<br>
-                        leave a comment
-                    </p>
-                    <a href="{% url 'account_signup' %}" class="btn btn-dark right ms-2">Signup</a>
-                </div>
-        </div>
-    </div>
-</div>    
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'recipe_add' %}" class="btn text-col1 fw-bold right ms-2 mb-2 bg-color4">Add Recipe</a>
+                    {% else %}
+                    <a href="{% url 'account_login' %}" class="btn text-col1 fw-bold right ms-2 mb-2 bg-color4">Add Recipe</a>
+                    {% endif %}
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
 
 {% endblock %}
