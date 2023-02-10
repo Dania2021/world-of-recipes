@@ -9,6 +9,9 @@ from django.contrib.auth import logout
 
 
 class RecipeList(generic.ListView):
+    '''
+    To display the list of recipes
+    '''
     model = Recipe
     recipe_list = Recipe.objects.all().order_by('-created_on')
     template_name = 'recipes_list.html'
@@ -16,7 +19,9 @@ class RecipeList(generic.ListView):
 
 
 class Home(View):
-
+    '''
+    The site homepage
+    '''
     def get(self, request, *args, **kwargs):
         return render(
             request,
@@ -26,7 +31,8 @@ class Home(View):
 
 class ProfileView(View):
     '''
-    To render the user profile with user's recipes
+    To display the user profile with update and
+    delete buttons and display user's recipes
     '''
     def get(self, request):
         profile_queryset = Profile.objects.filter(user=request.user)
@@ -44,6 +50,10 @@ class ProfileView(View):
 
 
 class RecipeDetail(View):
+    '''
+    To display the detail view of recipe and
+    comment form for authenticated users
+    '''
     model = Recipe
     fields = '__all__'
 
@@ -93,7 +103,9 @@ class RecipeDetail(View):
 
 
 class AddRecipeView(View):
-
+    '''
+    To display form to upload recipe by authenticated user
+    '''
     def get(self, request):
         add_form = RecipeForm()
 
@@ -120,7 +132,9 @@ class AddRecipeView(View):
 
 
 class UpdateRecipeView(View):
-
+    '''
+    To display form to update recipe
+    '''
     def get(self, request, id):
         recipe = get_object_or_404(Recipe, id=id)
         update_form = RecipeForm(instance=recipe)
@@ -151,7 +165,10 @@ class UpdateRecipeView(View):
 
 
 class Recipes(View):
-
+    '''
+    To display the detail view of recipe with
+    update and delete buttons
+    '''
     def get(self, request, id, *args, **kwargs):
         recipe = get_object_or_404(Recipe, id=id)
         return render(
@@ -164,7 +181,9 @@ class Recipes(View):
 
 
 class DeleteRecipeView(View):
-
+    '''
+    To display a modal to delete a recipe
+    '''
     def post(self, request, id, *args, **kwargs):
         recipe = get_object_or_404(Recipe, id=id)
 
@@ -175,7 +194,9 @@ class DeleteRecipeView(View):
 
 
 class ProfileAddView(View):
-
+    '''
+    To display a form to add user's profile
+    '''
     def get(self, request):
         profile = get_object_or_404(Profile, user=request.user)
         profile_form = ProfileForm(instance=profile)
@@ -206,7 +227,9 @@ class ProfileAddView(View):
 
 
 class ProfileEditView(View):
-
+    '''
+    To display a form for user to update profile
+    '''
     def get(self, request):
         profile = get_object_or_404(Profile, user=request.user)
         update_profile = ProfileForm(instance=profile)
@@ -239,7 +262,9 @@ class ProfileEditView(View):
 
 
 class ProfileDeleteView(View):
-
+    '''
+    To display a modal to delete user's profile
+    '''
     def post(self, request):
         user = request.user
         user.delete()
