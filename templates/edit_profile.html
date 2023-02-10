@@ -10,21 +10,22 @@
             <!--Profile Update-->
             <div class="col-md-6 mb-5 mt-4">
                  {% if user.is_authenticated %}
-                 <h2 class="text-center">Update Profile</h2>
+                 <h2 class="text-center text-col1 fw-bold">Update Profile</h2>
                  <div class="card-panel bg-color3 mb-5">
                      <form method="POST" enctype="multipart/form-data" action="{% url 'edit_profile' %}" class="ms-3 mt-3 pe-3 fw-bold text-col2">
                            {% csrf_token %}
                            {{ update_profile|crispy }}
                             <div class="row">
                                 <div class="col text-center">
-                                    <button type="submit" class="btn btn-light mb-2 bg-color4 text-col1" aria-label="Update profile">Update</button>
+                                    <button type="submit" class="btn btn-light mb-2 bg-color4 text-col1 fw-bold" aria-label="Update profile">Update</button>
                                 </div>
                                 <div class="col">
-                                   <a href="{% url 'recipe' %}" class="btn btn-light bg-color4 text-col1 mb-2 me-4">
+                                   <a href="{% url 'recipe' %}" class="btn btn-light bg-color4 text-col1 fw-bold mb-2 me-4" aria-label="Link to recipe page">
                                       Cancel
                                    </a>
                                 </div>
-                      </form>
+                                </div>
+                        </form>
                     </div>
                     {% endif %}
                 </div>
