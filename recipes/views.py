@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.contrib.auth import logout
+from django.db.models import Q
 
 
 class RecipeList(generic.ListView):
@@ -271,3 +272,23 @@ class ProfileDeleteView(View):
         messages.success(request, 'Your Profile Deleted successfully')
         logout(request)
         return HttpResponseRedirect(reverse('home'))
+
+
+class RecipeSearchView(View):
+    '''To display the search page'''
+    paginate_by = 6
+
+    def post(self, request, *args, **kwargs):
+        searched = request.POST['searched']
+        recipes = Recipe.objects.filter(
+            Q(ingredients__icontains=searched) |
+            Q(title__icontains=searched),
+            )
+        return render(
+            request,
+            'search_results.html',
+            {
+                'searched': searched,
+                'recipes': recipes,
+            }
+            )
