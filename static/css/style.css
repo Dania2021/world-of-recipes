@@ -98,6 +98,10 @@ footer p{
     background-color: #299617;
 }
 
+.search {
+    border-color: #ffff;
+}
+
 /***********************Prev & Next Button styling***************/
 .page-link {
     background-color: #fee277;
@@ -129,6 +133,11 @@ footer p{
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .navbar-nav {
+        margin-left: 30px;
+    }
+}
 /***********************styling on all pages****/ 
 .masthead {
     margin-top: 65px;
