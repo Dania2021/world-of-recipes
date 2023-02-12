@@ -292,3 +292,11 @@ class RecipeSearchView(View):
                 'recipes': recipes,
             }
             )
+
+
+class PageNotFoundError(View):
+    '''
+    To display 404 page
+    '''
+    def get(request, *args, **kwargs):
+        return render(request, '404.html')
