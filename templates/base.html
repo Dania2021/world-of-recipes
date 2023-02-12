@@ -25,7 +25,7 @@
      <nav class="navbar navbar-expand-lg navbar-bg fixed-top">
          <div class="container-fluid">
               <!--Logo-->
-              <a class="navbar-brand" href="{% url 'home' %}">
+              <a class="navbar-brand" href="{% url 'home' %}" aria-label="Link to homepage">
                   <h1 class="text-col2">World of Recipes</h1>
               </a>
                <!--Toggle button for mobile devices with small screens-->
@@ -40,24 +40,24 @@
                          <!--https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list-->
                          {% with request.resolver_match.url_name as url_name %}
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'home' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-current="page" href="{% url 'home' %}">Home</a>
+                             <a class="{% if url_name == 'home' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to home page" href="{% url 'home' %}">Home</a>
                          </li>
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'recipes_list' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" href="{% url 'recipes_list' %}">Recipes</a>
+                             <a class="{% if url_name == 'recipes_list' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to recipes page" href="{% url 'recipes_list' %}">Recipes</a>
                          </li>
                          {% if user.is_authenticated %}
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'recipe' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" href="{% url 'recipe' %}">Profile</a>
+                             <a class="{% if url_name == 'recipe' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to profile page" href="{% url 'recipe' %}">Profile</a>
                          </li>
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'account_logout' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" href="{% url 'account_logout' %}">Logout</a>
+                             <a class="{% if url_name == 'account_logout' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to logout page" href="{% url 'account_logout' %}">Logout</a>
                          </li>
                          {% else %}
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'account_login' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" href="{% url 'account_login' %}">Login</a>
+                             <a class="{% if url_name == 'account_login' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to login page" href="{% url 'account_login' %}">Login</a>
                          </li>
                          <li class="nav-item p-2">
-                             <a class="{% if url_name == 'account_signup' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" href="{% url 'account_signup' %}">Signup</a>
+                             <a class="{% if url_name == 'account_signup' %} text-col3 {% else %} text-col2 {% endif %} text-decoration-none" aria-label="link to signup page" href="{% url 'account_signup' %}">Signup</a>
                          </li>
                          {% endif %}
                          {% endwith %}
@@ -67,7 +67,7 @@
                      <form method="post" class="d-flex" action="{% url 'search_results' %}" role="search">
                           {% csrf_token %}
                           <input type="search" class="form-control pe-2 me-2" placeholder="Search by title or ingredients.." aria-label="search" name="searched">
-                          <button type="submit" class="btn text-col2 search">Search</button>
+                          <button type="submit" class="btn text-col2 search" aria-label="Search recipe">Search</button>
                      </form>
                 </div>
          </div>
