@@ -55,7 +55,7 @@ footer p{
     width: 100%;
     height: 90vh;
     
-    background: url('static/images/green-img.webp');
+    background-image: url('https://res.cloudinary.com/de6b9bh4j/image/upload/v1675192389/wccn8mgiqojnwouywbel.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
