@@ -50,4 +50,37 @@ Live Site:
        * Code
  * Acknowledgement   
 
+## Strategy
+
+ * ### User Stories
+
+    * #### New and unregistered user
+
+      * [#1](https://github.com/Dania2021/world-of-recipes/issues/1) As a user I can create an account so that I can interact with other user content and create my own.
+      * [#6](https://github.com/Dania2021/world-of-recipes/issues/6) As a user I can select and view full recipe.
+      * [#10](https://github.com/Dania2021/world-of-recipes/issues/10) As a user I can search recipes by title so that I can find recipes quickly.
+      * [#11](https://github.com/Dania2021/world-of-recipes/issues/11) As a user I can search recipes by ingredients so that I can find particular recipes.
+      * [#13](https://github.com/Dania2021/world-of-recipes/issues/13) As a user I can view paginated list of recipes so that I can easily select the recipe to view.
+      * [#14](https://github.com/Dania2021/world-of-recipes/issues/14) As a first time user I can navigate the site easily so that I know what the site is about.
+      * [#15](https://github.com/Dania2021/world-of-recipes/issues/15) As a first time user I can access the site easily so that I can view the site on any media screens with different browsers.
+      * [#16](https://github.com/Dania2021/world-of-recipes/issues/16) As a user I can view comments on an individual recipe so that I read the conversation.
+   
+   * #### Registered User
+
+      * [#2](https://github.com/Dania2021/world-of-recipes/issues/2) As a registered user I can login in into my account so that I can access the site features.
+      * [#3](https://github.com/Dania2021/world-of-recipes/issues/3) As a registered user I can logout so that I can keep my account secure.
+      * [#4](https://github.com/Dania2021/world-of-recipes/issues/4) As a registered user I can add and view my profile so that I know my account details.
+      * [#5](https://github.com/Dania2021/world-of-recipes/issues/5) As a registered user I can delete my profile from the site so that if longer use it.
+      * [#7](https://github.com/Dania2021/world-of-recipes/issues/7) As a registered user I can add recipes so that I can share it with others.
+      * [#8](https://github.com/Dania2021/world-of-recipes/issues/8) As a registered user I can update my recipes so that I can manage my recipe content.
+      * [#9](https://github.com/Dania2021/world-of-recipes/issues/9) As a registered user I can delete my recipes so that I can manage my recipes and also controls the recipe that I share.
+      * [#12](https://github.com/Dania2021/world-of-recipes/issues/12) As a registered user I can update my profile so that I can update my details and manage my account as I wish.
+      * [#18](https://github.com/Dania2021/world-of-recipes/issues/18) As a registered user I can comment on recipes so that I can give feedback and recommendations.
+
+   * #### Admin CRUD/superuser
+
+     * [#17](https://github.com/Dania2021/world-of-recipes/issues/17) As a site admin I can approve or disapprove comments so that I can filter out objectionable comments.
+     * [#19](https://github.com/Dania2021/world-of-recipes/issues/19) As an admin I can navigate the admin panel so that I can create, read, update and delete the data on the site.
+
+
 
