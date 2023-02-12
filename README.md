@@ -14,9 +14,9 @@ Live Site:
       * [New and unregisterd User](#new-and-unregistered-user)
       * [Registered User](#registered-user)
       * [Admin CRUD / superuser](#admin-crudsuperuser)
- * Scope    
-    * Site Owner Stories
-    * Agile Development Methodology
+ * [Scope](#scope)    
+    * [Site Owner Stories](#site-owner-stories)
+    * [Agile Development Methodology](#agile-development-methodology)
  * Structure
     * Database ERD 
     * Wireframes
@@ -81,6 +81,27 @@ Live Site:
 
      * [#17](https://github.com/Dania2021/world-of-recipes/issues/17) As a site admin I can approve or disapprove comments so that I can filter out objectionable comments.
      * [#19](https://github.com/Dania2021/world-of-recipes/issues/19) As an admin I can navigate the admin panel so that I can create, read, update and delete the data on the site.
+
+## Scope
+
+   * ### Site Owner Stories
+
+      * The website is accessible and responsive. It targets the user who enjoys cooking, who would like to share their own recipes with others.
+      * The site offers different user interface that user can sign up an account, log in and log out as well as edit the user profile.
+      * The site offers registered user to upload and view recipe.
+      * The site offers registered user to view and edit their account profile.
+      * The site offers registered user to make comment on recipes and give their feedback.
+
+
+   * ### Agile Development Methodology
+
+     GitHub issues and projects were used to document and track an agile development approach. An issue was created for each user story. With the MoSCoW techniques, the user stories were listed on Projects’ Kanban board and were labeled to prioritize the requirements.They were labelled as 'must have', 'could have' or 'should have'. They would be moved across the board from To do, In progress and Done in the end when all the tasks are completed. 
+     The project board was captured near the mid-way through and at the end:
+     
+     ![user-stories](/readme_docs/us-image.png)
+
+     ![user-stories-end-image](/readme_docs/us-stories-end.png)
+
 
 
 
