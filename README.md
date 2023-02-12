@@ -9,41 +9,45 @@ Live Site:
 
 ## Table Of Contents
 
- * UX
-   * User Stories
-      * Admin CRUD / superuser
-      * New and unregisterd User
-      * Registered User
+ * [Strategy](#strategy)
+   * [User Stories](#user-stories)
+      * [New and unregisterd User](#new-and-unregistered-user)
+      * [Registered User](#registered-user)
+      * [Admin CRUD / superuser](#admin-crudsuperuser)
+ * Scope    
     * Site Owner Stories
     * Agile Development Methodology
-    * Design
-      * Coloue Schemes
-      * Typography
-      * Database ERD
+ * Structure
+    * Database ERD 
     * Wireframes
+ * Skeleton  
     * Features 
        * Home Page
        * Login Page
        * SignUp Page
        * Profile Page
        * Recipes Page
+       * Search page
        * Logout Page
        * Admin Site
        * Future Features
     * Technologies Used
-    * Testing
+ * Surface
+    * Design
+      * Colour Schemes
+      * Typography  
+    * Deployment
+ * Testing
       * Manual Testing
       * Validator Testing
       * Lighthouse Testing
       * Bugs
         * Resolved Bugs
         * Unresolved Bugs
-    * Deployment
-    * Credits
+ * Credits
        * Content
        * Media
        * Code
-    * Acknowledgement   
-
+ * Acknowledgement   
 
 
