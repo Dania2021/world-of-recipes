@@ -109,10 +109,17 @@ footer p{
 }
 
 /*******************************Media queries************/
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
     .bg-text {
         font-size: 75%;
     }
+    #msg {
+        font-size: 85%;
+    }
+
+}
+
+@media screen and (min-width: 320px) {
     .signup-text {
         font-size: 85%;
     }
@@ -128,9 +135,6 @@ footer p{
 }
 
 @media screen and (min-width: 425px) {
-    .bg-text {
-        font-size: 85%;
-    }
     .signup-text {
         font-size: 90%;
     }
