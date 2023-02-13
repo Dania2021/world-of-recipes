@@ -113,6 +113,9 @@ footer p{
     .bg-text {
         font-size: 75%;
     }
+    .signup-text {
+        font-size: 85%;
+    }
     footer p {
         font-size: 55%;
     }
@@ -127,6 +130,9 @@ footer p{
 @media screen and (min-width: 425px) {
     .bg-text {
         font-size: 85%;
+    }
+    .signup-text {
+        font-size: 90%;
     }
     footer p {
         font-size: 75%;
