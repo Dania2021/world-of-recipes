@@ -108,7 +108,7 @@ Live Site:
 
      ER diagram was created using dbdiagram that maps the database structure for creating models in Django. The ERD helps me to visualize the relationships between the tables which gives me better idea on how the database works for the project development.
 
-     ![recipes-erd](/readme_docs/recipes-erd.png)
+     ![recipes-erd](/readme_docs/recipe-erd.png)
 
    * ### Wireframes
 
