@@ -1,5 +1,6 @@
 # World Of Recipes
 
+  ![title-image](/readme_docs/title-img.png)
 
 World of recipes is a recipe website that allows the user to create and share recipes with other users from around the world. The website design is responsive so it can be used on any device.
 
@@ -38,12 +39,6 @@ Live Site:
       * Typography  
     * Deployment
  * Testing
-      * Manual Testing
-      * Validator Testing
-      * Lighthouse Testing
-      * Bugs
-        * Resolved Bugs
-        * Unresolved Bugs
  * Credits
       * Content
       * Media
@@ -145,3 +140,11 @@ Live Site:
       * #### Recipe Detail Wireframe
 
         ![recipe-detail-wireframe](/readme_docs/comment-wireframe.png)  
+
+## Skeleton
+
+## Surface
+
+## Testing
+
+   The testing documentation can be found [here](TESTING.md)
