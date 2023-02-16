@@ -17,9 +17,9 @@ Live Site:
  * [Scope](#scope)    
     * [Site Owner Stories](#site-owner-stories)
     * [Agile Development Methodology](#agile-development-methodology)
- * Structure
-    * Database ERD 
-    * Wireframes
+ * [Structure](#structure)
+    * [Database ERD](#database-erd) 
+    * [Wireframes](#wireframes)
  * Skeleton  
     * Features 
        * Home Page
@@ -45,9 +45,9 @@ Live Site:
         * Resolved Bugs
         * Unresolved Bugs
  * Credits
-       * Content
-       * Media
-       * Code
+      * Content
+      * Media
+      * Code
  * Acknowledgement   
 
 ## Strategy
@@ -102,6 +102,46 @@ Live Site:
 
      ![user-stories-end-image](/readme_docs/us-stories-end.png)
 
+## Structure
 
+   * ### Database ERD
 
+     ER diagram was created using dbdiagram that maps the database structure for creating models in Django. The ERD helps me to visualize the relationships between the tables which gives me better idea on how the database works for the project development.
 
+     ![recipes-erd](/readme_docs/recipes-erd.png)
+
+   * ### Wireframes
+
+     I used Balsamiq to create the project’s wireframes that displays an overview of how the site looks like. However, the end result might be slightly different than the initial design due to the development of the project.
+
+      * #### Homepage Wireframe
+
+        ![homepage-wireframe](/readme_docs/home-wireframe.png)   
+
+      * #### Profile page Wireframe
+
+        ![profile-wireframe](/readme_docs/profile-wireframe.png)
+
+      * #### My recipes Wireframe
+
+        ![myrecipes-wireframe](/readme_docs/my-recipes-wireframe.png)   
+
+      * #### Recipe View Wireframe
+
+        ![recipe-view-wireframe](/readme_docs/recipe-view-wireframe.png)
+
+      * #### Recipe Add Wireframe
+
+         ![recipe-add-wireframe](/readme_docs/add-recipe-wireframe.png)  
+
+      * #### Recipe Delete Wireframe
+
+        ![delete-recipe-wireframe](/readme_docs/delete-recipe-wireframe.png)     
+
+      * #### Recipes List Wireframe
+
+        ![recipes-list-wireframe](/readme_docs/recipe-list-wireframe.png)
+
+      * #### Recipe Detail Wireframe
+
+        ![recipe-detail-wireframe](/readme_docs/comment-wireframe.png)  

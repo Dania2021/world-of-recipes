@@ -33,5 +33,5 @@ urlpatterns = [
         views.ProfileDeleteView.as_view(), name='profile_delete'),
     path(
         'search_results/',
-        views.RecipeSearchView.as_view(), name='search_results'), 
+        views.RecipeSearchView.as_view(), name='search_results'),
         ]
