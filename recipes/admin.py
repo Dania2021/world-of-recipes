@@ -18,10 +18,10 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('author', 'body', 'created_on', 'recipe', 'approved')
     search_fields = ['author', 'recipe']
     list_filter = ('author',)
-    actions = ['comments_approved']
+    actions = ['comments_disapproved']
 
-    def comments_approved(self, request, queryset):
-        queryset.update(approved=True)
+    def comments_disapproved(self, request, queryset):
+        queryset.update(approved=False)
 
 
 @admin.register(Profile)
