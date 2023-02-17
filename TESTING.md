@@ -9,7 +9,7 @@
   * [W3C CSS Validator](#w3c-css-validator)
   * [JSHint JavaScript validator](#jshint-javascript-validator)
   * [Python Validation](#python-validation)
-* Lighthouse Testing
+* [Lighthouse Testing](#lighthouse-testing)
 * Browser Compatibility Testing
 * Tools Testing
 * Bugs
@@ -55,3 +55,97 @@
     * recipes/signals.py
     * recipes/urls.py
     * recipes/views.py
+
+## Lighthouse Testing
+  
+   All pages were ran through Lighthouse on Chrome Devtools for both desktop and mobile device display and ran in incognito mode. 
+
+   * ### Home Page
+
+     * Lighthouse report for desktop
+
+       ![lighthouse-desktop-home](/readme_docs/lighthouse-home.png)
+
+     * Lighthouse report for mobile
+
+       ![lighthouse-mobile-home](/readme_docs/lighthouse-mobile-home.png)  
+
+   * ### Recipe List Page    
+
+      * Lighthouse report for desktop
+
+       ![lighthouse-desktop-recipe-list](/readme_docs/lighthouse-recipes.png)
+
+      * Lighthouse report for mobile
+     
+        ![lighthouse-mobile-recipe-list](/readme_docs/lighthouse-mobile-recipes.png)
+
+   * ### Login Page
+
+       * Lighthouse report for desktop
+
+         ![lighthouse-desktop-login](/readme_docs/lighthouse-login.png)
+
+       * Lighthouse report for mobile
+
+          ![lighthouse-mobile-login](/readme_docs/lighthouse-mobile-login.png)
+
+   * ### Signup Page
+
+       * Lighthouse report for desktop
+
+         ![lighthouse-desktop-signup](/readme_docs/lighthouse-signup.png)
+
+       * Lighthouse report for mobile  
+
+          ![lighthouse-mobile-signup](/readme_docs/lighthouse-mobile-signup.png)
+
+   * ### Recipe Detail Page
+
+       * Lighthouse report for desktop
+     
+           ![lighthouse-desktop-recipe-detail](/readme_docs/lighthouse-recipe-detail.png)
+
+       * Lighthouse report for mobile
+         
+           ![lighthouse-mobile-recipe-detail](/readme_docs//lighthouse-mobile-recipe-detail.png)
+
+   * ### Recipe Add Page
+
+       * Lighthouse report for desktop
+
+           ![lighthouse-desktop-recipe-add](/readme_docs/lighthouse-recipe-add.png)
+
+       * Lighthouse report for mobile   
+
+           ![lighthouse-mobile-recipe-add](/readme_docs/lighthouse-mobile-add-profile.png)
+
+   * ### Recipe View Page    
+
+       * Lighthouse report for desktop   
+
+          ![lighthouse-desktop-recipe-view](/readme_docs/lighthouse-recipe-view.png)
+
+       * Lighthouse report for mobile    
+
+          ![lighthouse-mobile-recipe-view](/readme_docs/lighthouse-mobile-recipe-view.png) 
+
+  * ### My Recipes Page
+
+    * Lighthouse report for desktop      
+
+        ![lighthouse-desktop-my-recipes](/readme_docs/lighthouse-mobile-my-recipes.png)
+
+    * Lighthouse report for mobile   
+
+        ![lighthouse-mobile-my-recipes](/readme_docs/lighthouse-mobile-my-recipes.png)
+
+  * ### Profile Edit Page
+
+    * Lighthouse report for desktop     
+
+        ![lighthouse-desktop-profile-edit](/readme_docs/lighthouse-edit-profile.png)
+
+    * Lighthouse report for mobile 
+
+        ![lighthouse-mobile-profile-edit](/readme_docs/lighthouse-mobile-edit-profile.png)  
