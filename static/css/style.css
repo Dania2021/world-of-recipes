@@ -13,9 +13,14 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+/*********************headings******/
+h1, h2, h3 , h4, h5 {
+    font-family: "Fredoka One", cursive;
+}
+
 /*********************Navbar******/
 .navbar {
-    background-color: #299617;
+    background-color: #103909;
 }
 
 .navbar-brand {
@@ -67,7 +72,7 @@ footer p{
 
 /****************Cover text styling******/
 .cover-text {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #103909;
     color: #ffff;
     font-weight: bold;
     text-align: center;
@@ -93,9 +98,9 @@ footer p{
 }
 
 .btn:hover {
-    border-color: #fee277;
-    color: #fee277;
-    background-color: #299617;
+    border-color: #fee376;
+    color: #fee376;
+    background-color: #103909;
 }
 
 .search {
@@ -104,8 +109,8 @@ footer p{
 
 /***********************Prev & Next Button styling***************/
 .page-link {
-    background-color: #fee277;
-    color: #299617;
+    background-color: #fee376;
+    color: #103909;
 }
 
 /*******************************Media queries************/
@@ -157,7 +162,7 @@ footer p{
 /***********************styling on all pages****/ 
 .masthead {
     margin-top: 65px;
-    background: #fee277;
+    background: #fee376;
 }
 
 /***********************alert message styling******************/
@@ -167,23 +172,31 @@ footer p{
 
 /*************************text-colour***********************/
 .text-col1 {
-    color: #299617;
+    color: #103909;
 }
 .text-col2 {
     color: #ffff;
 }
 .text-col3 {
-    color: #fee277;
+    color: #fee376;
+}
+.text-col4 {
+    color:#000000;
 }
 
 /***********************background colour****************************/
 .bg-color3 {
-    background: #299617;
+    background: #103909;
 }
 .bg-color4 {
-    background: #fee277;
+    background: #fee376;
 }
 
 html {
-    background: #fee277;
+    background: #fee376;
+}
+
+/************************Link styling************************/
+.a-link:hover {
+    color: #ef2917;
 }

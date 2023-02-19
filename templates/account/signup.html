@@ -12,7 +12,7 @@
       <div class="col-md-4 mt-3">
         <h2 class="text-center text-col1 fw-bold mt-3">{% trans "Sign Up" %}</h2>
 
-        <p class="text-center text-col1 fw-bold">{% blocktrans %}Already a member? Please <a href="{{ login_url }}" class="fw-bold">Login</a>.{% endblocktrans %}</p>
+        <p class="text-center text-col1 fw-bold">{% blocktrans %}Already a member? Please <a href="{{ login_url }}" class="text-col1 fw-bold a-link">Login</a>.{% endblocktrans %}</p>
       
            <div class="card-panel mt-3 mb-5 bg-color3">
                <form class="signup ms-3 mt-2 pe-3 fw-bold text-col2" id="signup_form" method="post" action="{% url 'account_signup' %}">

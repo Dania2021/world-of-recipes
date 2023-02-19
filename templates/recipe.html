@@ -76,7 +76,7 @@
                          <div class="col-md-6 text-center mb-5">
                              <!--Link to add a recipe-->
                              <a href="{% url 'recipe_add' %}" class="btn bg-color4 text-col1 fw-bold m-2" aria-label="add a recipe">
-                                  Add Recipe <i class="fa-light fa-plus"></i>
+                                  Add Recipe <i class="fa fa-plus"></i>
                              </a>     
                          </div>
                     </div>
@@ -86,7 +86,7 @@
                     
                       <div class="card ms-2 mx-2 mb-3">
                           <p class="author ms-4 mt-2 fw-bold text-col1">Author: {{ recipe.author }}</p>
-                          <a href="{% url 'recipes' recipe.id %}">
+                          <a href="{% url 'recipes' recipe.id %}" class="text-col1 a-link fw-bold">
                           <p class="card-title ms-4 fw-bold">{{ recipe.title }}</p></a>
                       </div>
                   

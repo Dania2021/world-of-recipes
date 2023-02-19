@@ -33,10 +33,11 @@ Live Site:
        * Admin Site
        * Future Features
     * Technologies Used
- * Surface
-    * Design
-      * Colour Schemes
-      * Typography  
+ * [Surface](#surface)
+    * [Design](#design)
+      * [Colour Schemes](#colour-schemes)
+      * [Typography](#typography)  
+      * [Imagery](#imagery)
     * Deployment
  * Testing
  * Credits
@@ -144,6 +145,25 @@ Live Site:
 ## Skeleton
 
 ## Surface
+
+   * ### Design
+     
+      * #### Colour Schemes
+
+        ![colour-palette](/readme_docs/colour-palette.png)
+
+        I used Cooler to help to check colour contrast. The colour scheme which I used earlier showing poor quality contrast. So, I update the colour scheme for good quality contrast. 
+
+      * #### Typography
+
+        Google Fonts was used to import the chosen fonts for use in the site. Headings are in Fredoka One with cursive as a fallback font. The body is in Roboto with sans-serif as a fallback font. This means the text will be easy to read on all device sizes.
+
+      * #### Imagery
+
+        * Images are uploaded by the users and stored in Cloudinary database.
+        * There are placeholder images for both recipes and profiles, if user doesnot wants to upload an image.
+
+   
 
 ## Testing
 

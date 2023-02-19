@@ -16,7 +16,7 @@
           
             <h2 class="text-center text-col1 fw-bold">{% trans "Login" %}</h2>
             <p class="text-center text-col1 fw-bold signup-text">{% blocktrans %}Please
-              <a href="{{ signup_url }}" class="fw-bold">Sign up</a> if you don't have an account yet.{% endblocktrans %}
+              <a href="{{ signup_url }}" class="fw-bold text-col1 fw-bold a-link">Sign up</a> if you don't have an account yet.{% endblocktrans %}
             </p>
             <div class="card-panel mb-5 bg-color3 text-col2">
               <form class="login ms-3 mt-3 pe-3 fw-bold item-col2" method="POST" action="{% url 'account_login' %}">
