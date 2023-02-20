@@ -37,6 +37,10 @@ h1, h2, h3 , h4, h5 {
     
 }
 
+.fa-bars, .navbar-toggler {
+    color: #ffffff;
+    border-color: #000000;
+}
 /*********************Footer******/
 footer p{
     color: #ffff;

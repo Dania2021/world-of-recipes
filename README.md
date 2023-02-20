@@ -21,8 +21,8 @@ Live Site:
  * [Structure](#structure)
     * [Database ERD](#database-erd) 
     * [Wireframes](#wireframes)
- * Skeleton  
-    * Features 
+ * [Skeleton](#skeleton)  
+    * [Features 
        * Home Page
        * Login Page
        * SignUp Page
@@ -32,7 +32,12 @@ Live Site:
        * Logout Page
        * Admin Site
        * Future Features
-    * Technologies Used
+    * [Technologies Used](#technologies-used)
+       * [Languages Used](#languages-used)
+       * [Libraries and Frameworks](#libraries-and-frameworks)
+       * [Packages/Dependencies Installed](#packages--dependecies-installed)
+       * [Databases Used](#databases-used)
+       * [Programs Used](#programs-used)
  * [Surface](#surface)
     * [Design](#design)
       * [Colour Schemes](#colour-schemes)
@@ -143,6 +148,52 @@ Live Site:
         ![recipe-detail-wireframe](/readme_docs/comment-wireframe.png)  
 
 ## Skeleton
+
+   * ### Technologies Used
+
+      #### Languages Used
+
+        * [HTML5](https://en.wikipedia.org/wiki/HTML)
+        * [CSS3](https://en.wikipedia.org/wiki/CSS)
+        * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+        * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+
+      #### Libraries and Frameworks
+
+        * [Django 3.2](https://www.djangoproject.com/) - Django was used as web framework.
+        * [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - Templating engine.
+        * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - Bootstrap 5 was used throughout the website to help with styling and responsiveness.
+        * [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+        * [Font Awesome](https://fontawesome.com/) - Font Awesome was used throughout the website to add icons for aesthetic and UX purposes.
+        * [Cloudinary](https://cloudinary.com/) - Libraries to enable storage of static files and media in Cloudinary
+        * [Summernote](https://summernote.org/) - Summernote has been used as WYSIWYG editor.
+        * [Psycopg2](https://pypi.org/project/psycopg2/) - Python PostgreSQL adapater
+      
+      #### Packages / Dependecies Installed
+
+        * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) - User account management django application suite.
+        * [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/) - Django app to simplify form rendering
+        * [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP server
+        * [dj-database-url](https://pypi.org/project/dj-database-url/) - Django utility to create an environment variable to configure the Django application
+
+      #### Databases Used
+
+        * [Heroku Postgres](https://www.heroku.com/postgres) - Heroku Postgres database was used in production, as a service based on PostgreSQL provided by Heroku.
+        * [ElephantSql](https://www.elephantsql.com/) - Migrated database to ElephantSql.
+
+      #### Programs Used
+
+        * [Git](https://git-scm.com/) - For version control.
+        * [Github](https://github.com/) - To save and store the files for the website.
+        * [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness and styling.
+        * [Balsamiq](https://balsamiq.com/) - Used to create wireframes.
+        * [Heroku](https://dashboard.heroku.com/) - Heroku was used to deploy the website.
+        * [Am I Responsive?](https://ui.dev/amiresponsive) - To show the website image on a range of devices.
+        * [Favicon.io](https://favicon.io/) - To create the favicon.
+        * [Birme](https://www.birme.net/?target_width=1400&target_height=1400&auto_height=true&image_format=webp&rename_start=1) - To resize images and convert to webP format for the site.
+        * [dbdiagram.io](https://dbdiagram.io/) - To create the database schema.  
+
 
 ## Surface
 
