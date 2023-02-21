@@ -43,8 +43,8 @@ Live Site:
       * [Colour Schemes](#colour-schemes)
       * [Typography](#typography)  
       * [Imagery](#imagery)
-    * Deployment
- * Testing
+    * [Deployment](#deployment)
+ * [Testing](#testing)
  * Credits
       * Content
       * Media
@@ -214,8 +214,68 @@ Live Site:
         * Images are uploaded by the users and stored in Cloudinary database.
         * There are placeholder images for both recipes and profiles, if user doesnot wants to upload an image.
 
-   
+   * ### Deployment
 
+        #### Deploying on Heroku
+        
+        Worldofrecipes is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
+        * You will need a Cloudinary account to host user images and static files.
+        * Login to Cloudinary.
+        * Select the 'dashboard' option.
+        * Copy the value of the 'API Environment variable' from the part starting cloudinary:// to the end. You may need to select the eye icon to view the full environment variable. Paste this value somewhere for safe keeping as you will need it shortly (but destroy after deployment).
+        * Log in to Heroku.
+        * Select 'Create new app' from the 'New' menu at the top right.
+        * Enter a name for the app and select the appropriate region.
+        * Select 'Create app'.
+        * Select 'Settings' from the menu at the top.
+        * Login to ElephantSQL.
+        * Click 'Create new instance' on the dashboard.
+        * Name the 'plan' and select the 'Tiny Turtle (free)' plan.
+        * Select 'select region'.
+        * Choose the nearest data centre to your location.
+        * Click 'Review'.
+        * Go to the ElephantSQL dashboard and click on the 'database instance name' for this project.
+        * Copy the ElephantSQL database URL to your clipboard (this starts with postgres://).
+        * Return to the Heroku dashboard.
+        * Select the 'settings' tab.
+        * Locate the 'reveal config vars' link and select.
+        * Enter the following config var names and values:
+             * CLOUDINARY_URL: your cloudinary URL as obtained above
+             * DATABASE_URL: your ElephantSQL postgres database URL as obtained above
+             * PORT: 8000
+             * SECRET_KEY: your secret key
+        * Select the 'Deploy' tab at the top.
+        * Select 'GitHub' and confirm you wish to deploy using GitHub. You may be asked to enter your GitHub password.
+        * Find the 'Connect to GitHub' section and use the search box to locate your repo.
+        * Select 'Connect' when found.
+        * Optionally choose the main branch under 'Automatic Deploys' and select 'Enable Automatic Deploys' if you wish your deployed site to be automatically redeployed every time you push changes to GitHub.
+        * Find the 'Manual Deploy' section, choose 'main' as the branch to deploy and select 'Deploy Branch'.
+        * Your site will shortly be deployed and you will be given a link to the deployed site when the process is complete.
+
+     #### How to Fork
+      By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+      1. Log into GitHub or create an account.
+      2. Locate the GitHub Repository.
+      3. At the top of the repository, on the right side of the page, select "Fork"
+      4. You should now have a copy of the original repository in your GitHub account.
+
+     #### How to Clone
+      How to run this project locally:
+
+      1. Log into GitHub or create an account.
+      2. Locate the GitHub Repository.
+      3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+      4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+      5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
+
+         git clone { & THE LINK FROM STEP 3 }
+      6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
+
+      7. Install the packages from the requirements.txt file by running the following command in the Terminal:
+
+         pip3 install -r requirements.txt
+   
 ## Testing
 
    The testing documentation can be found [here](TESTING.md)
