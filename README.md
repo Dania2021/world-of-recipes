@@ -22,7 +22,7 @@ Live Site:
     * [Database ERD](#database-erd) 
     * [Wireframes](#wireframes)
  * [Skeleton](#skeleton)  
-    * [Features 
+    * [Features
        * Home Page
        * Login Page
        * SignUp Page

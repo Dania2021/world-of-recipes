@@ -121,17 +121,159 @@
       * Comments can be read and created from the site.
       * Profile, recipes and comments can be filtered and searched to narrow down a specific group.
 
-   
-              
+## Manual Testing 
+
+   * ### Site testing
+
+     | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+     | --- | --- | --- | --- | --- |
+     | Navbar |  |  |  |  |
+     | WorldofRecipes Title | When clicked the user will be redirected to the home page | Clicked title  | Redirected to the home page | Pass |
+     | Home Page Link | When clicked the user will be redirected to the home page | Clicked link | Redirected to the home page | Pass |
+     | Recipes Page Link | When clicked the user will be redirected to the List of Recipes page | Clicked link |  Redirected to the list of recipes | Pass |
+     | Login Page Link | When clicked the user will be redirected to the Login Page  | Clicked link  | Redirected to the login page | Pass |
+     | SignUp Page Link | When clicked the user will be redirected to the Signup Page | Clicked link | Redirected to the signup page | Pass |
+     | Search Link | When clicked the user will be redirected to the search page | Clicked link | Redirected to the search page | Pass |
+     | Profile Link (Logged in users only) | When clicked the user will be redirected to the Recipe page | Clicked link | Redirected to the recipe page | Pass |
+     | Logout Page Link(Logged in users only) | When clicked the user will be redirected to the logout page | Clicked link | Redirected to the logout page | Pass |
+     | Footer |  |  |  |  |
+     | Facebook icon | Clicking the link open Facebook page on a separate tab | Clicked link | Redirected to the facebook page | Pass |
+     | Instagram icon | Clicking the link open Instagram page on a separate tab | Clicked link | Redirected to the instagram page | Pass |
+     | Twitter icon | Clicking the link open Twitter page on a separate tab | Clicked link | Redirected to the twitter page | Pass |
+
+   * ### Home Page Testing
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | HomePage |  |  |  |  |
+       | Recipe Link | When clicked the user will be redirected to the List of Recipes page | Clicked link | Redirected to the list of recipes | Pass |
+       | Add Recipe Link |  When clicked the user will be redirected to the Login page | Clicked link | Redirected to the login page | Pass |
+       | Add Recipe Link (Logged in users only) | When clicked the user will be redirected to the Recipe Add page | Clicked link | Redirected to the recipe add page | Pass | 
+
+   * ### Login Page Testing    
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Login Page |  |  |  |  |
+       | Username input - empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | Pass |
+       | Password input empty | This is a required field so the form should not submit if empty | Tried to submit the form with this field empty | Tooltip tells me this field is required | Pass |
+       | Login button | Clicking the button authenticates the user and redirect to the Home page, Display message when user login successfully | Submitted form | Redirected to the home page and message shown | Pass |
+       | Incorrect username or password used | Display message when credentials are not valid. | Incorrect username/password entered | Message display to let the user know they have entered an incorrect username/password | Pass |
+       | Link to Signup page | This should redirect the user to the Signup page | Clicked link | Redirected to the signup page | Pass |
+
+   * ### Signup Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Signup Page |  |  |  |  |
+       | Username input - empty | The username is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Username input | Username is in use, message should display to user | Entered an in use username | Message displayed to say username already in use | Pass |
+       | Email input | The email input should include an email address | Entered plain text | Tooltip tells user to use an email address | Pass |
+       | Email input | Email address is in use, message should display to user | Entered an in use email address | Message displayed to say email address already in use | Pass |
+       | Password input | This field should be at least 8 characters | Entered password less than 8 characters | Tooltip tells user the password should be at least 8 characters | Pass |
+       | Password input - empty | The password is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Password (again) input | Display message if both passwords are not equal | Entered password and password(again) are not same | Tooltip tells user the password should same at each time | Pass |
+       | Password (again) input - empty | The password is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Signup Button | Should redirect user to the Profile page and display message that user is successfully created | Created new user and submitted form | Redirected to the profile page and message displayed | Pass |
+       | Link to Login page | This should redirect the user to the Login page | Clicked link | Redirected to the login page | Pass |
+
+   * ### Recipes List Page Testing
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipes List Page |  |  |  |  |
+       | Recipe Title link | This should redirect the user to the Recipe Detail page | Clicked link | Redirected to the recipe detail page | Pass |
+       | Pagination | Should paginate if more than 6 recipes are listed | Site Pagination | Pagination is occurring when more than 6 recipes are listed | Pass |
+       | Pagination Buttons | Should redirect to next or previous page of Recipes List | Clicked Button | Redirect to the next or previous page of recipes list | Pass |
+
+   * ### Recipe Detail Page Testing
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipe Detail Page |  |  |  |  |
+       | Body Input- empty (Logged in users only) | Body is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Add Comment Button (Logged in users only) | This should redirect the user to the Recipe Detail page and display message that comment added | Submitted form | Redirected to the recipe detail page and message displayed | Pass |
+       | Cancel Link (Logged in users only) | This should redirect the user to the Recipes List page | Clicked Link | Redirect to the recipes list page | Pass |
+       | Link to Login page | This should redirect the user to the Login page | Clicked link | Redirected to the login page | Pass |
 
 
+   * ### Recipe Add Page Testing 
 
-               
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipe Add Page (Logged in users only) |  |  |  |  |
+       | Title Input- empty | Title is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Ingredients Input- empty | Ingredients is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass | 
+       | Steps Input- empty | Steps is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass | 
+       | Serves Input- empty | Serves is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Duration Input- empty | Duration is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
+       | Add Recipe Button | This should redirect the user to the Home page and display message that recipe added successfully | Submitted form | Redirected to the home page and message displayed | Pass |
+       | Cancel Link | This should redirect the user to the Recipe page | Clicked Link | Redirect to the recipe page | Pass |  
 
+   * ### Recipe Edit Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipe Edit Page (Logged in users only) |  |  |  |  |    
+       | Title input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the recipe information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
+       | Ingredients input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the recipe information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
+       | Steps input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the recipe information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass | 
+       | Serves input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the recipe information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass |
+       | Duration input | This is a required field so should ask for a value to be entered if empty. This field should be pre-populated with the recipe information saved to the database | Input was pre-populated. Cleared the input | Tooltip told me it is a required field | Pass | 
+       | Skill Level Dropdown | This field should be pre-populated with the recipe information saved to the database | Checked to see correct skill level was displayed | Correct skill level displayed | Pass |
+       | Cuisine Name Dropdown | This field should be pre-populated with the recipe information saved to the database | Checked to see correct cuisine name was displayed | Correct cuisine name displayed | Pass |
+       | Update Button | This should redirect the user to the Recipe page and display message that recipe updated | Submitted form | Redirected to the recipe page and message displayed | Pass |
+       | Cancel Link | This should redirect the user to the Recipe page | Clicked Link | Redirect to the recipe page | Pass |  
+
+   * ### Recipes Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipes Page (Logged in users only) |  |  |  |  |
+       | Update Link | When the update link is clicked the user should be taken to the Recipe Edit page with the inputs pre-populated with the values stored in the database for that recipe | Clicked link | Redirected to the recipe edit page. Recipe details filled in with previously saved information | Pass |  
+       | Delete button | When the user clicks this button a modal should pop up asking the user to confirm they want to delete this recipe | Clicked button | Modal popped up to confirm if I wanted to delete the recipe | Pass | 
+       | Yes button on modal | When clicked the recipe should be deleted | Clicked button | Recipe Deleted from recipe page and recipes list page | Pass | 
+       | No button on modal | When clicked the modal should close | Clicked button | Modal closed | Pass |
+
+   * ### Profile Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Profile Page (Logged in users only) |  |  |  |  |
+       | Add Profile Button | This should redirect the user to the Recipe page and display message that profile added successfully | Submitted form | Redirected to the recipe page and message displayed |  Pass |    
+
+   * ### Profile Edit Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Profile Edit Page (Logged in users only) |  |  |  |  |
+       | Update Button | This should redirect the user to the Recipe page and display message that profile updated successfully | Submitted form | Redirected to the recipe page and message displayed | Pass |
+       | Cancel Link | This should redirect the user to the Recipe page | Clicked Link | Redirect to the recipe page | Pass |  
     
-         
+   * ### Recipe Page Testing 
 
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Recipe Page (Logged in users only) |  |  |  |  |
+       | Update Link | When the update link is clicked the user should be taken to the Edit Profile page with the inputs pre-populated with the values stored in the database for that profile | Clicked link | Redirected to the edit profile page. Profile details filled in with previously saved information | Pass |  
+       | Delete button | When the user clicks this button a modal should pop up asking the user to confirm they want to delete this profile | Clicked button | Modal popped up to confirm if I wanted to delete the profile | Pass | 
+       | Yes button on modal | When clicked the profile should be deleted | Clicked button | 
+       Profile Deleted | Pass | 
+       | No button on modal | When clicked the modal should close | Clicked button | Modal closed | Pass |
+       | Add Recipe Button | When the add button is clicked the user should be taken to the Recipe Add page | Clicked Button | Redirect to the recipe add page | Pass |
+       | Recipe Title Link | When the link is clicked the user should be taken to the Recipes page | Clicked Link | Redirect to the recipes page | Pass |
 
+   
+   * ### Search Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Search Page |  |  |  |  |
+       | Search Button | A search is performed when the user enters a search title | Submitted Form | The search returns recipe results | Pass |
+       | Search Button | A search is performed when the user enters a search an ingredient | Submitted Form | The search returns recipe results | Pass |
+       | Search - empty | When user submit no value in search field, displays you didnt search anything  | Submitted Form | Displayed message to the user | Pass | 
+       | Search Doesnot Exist | When user submit value that doesnot exist, display message no results found | Submitted Form | Displayed message to the user | Pass |    
+   
 
 ## Validator Testing
 
