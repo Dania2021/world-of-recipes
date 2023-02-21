@@ -22,8 +22,9 @@ Live Site:
     * [Database ERD](#database-erd) 
     * [Wireframes](#wireframes)
  * [Skeleton](#skeleton)  
-    * [Features
-       * Home Page
+    * [Features](#features)
+       * [General](#general)
+       * [Home Page](#home-page)
        * Login Page
        * SignUp Page
        * Profile Page
@@ -148,6 +149,36 @@ Live Site:
         ![recipe-detail-wireframe](/readme_docs/comment-wireframe.png)  
 
 ## Skeleton
+
+   * ### Features
+     
+       * #### General
+
+           The website has been designed from a mobile first perspective. It has responsive design across all device sizes.
+
+           ##### Navigation Bar
+
+            The navigation bar contains the main logo, section links and search bar. 
+            The site's navigation tabs are displayed Home, Recipes, Login, Signup when the user isn't logged in.
+
+            ![Navigation bar](/readme_docs/header-img.png)
+
+            The site's navigation tabs are changed to Home, Recipes, Profile, Logout when the user is logged in.
+
+            ![Login Navigation bar](/readme_docs/header-login-img.png)
+
+            The search bar provide the Site User an input field and a Search button to be able to search for specific recipes by using keyord title or ingredients.
+
+           ##### Footer
+
+            A footer is displayed on all pages of the website and contains the copyright and links to social media channels
+
+            ![Footer](/readme_docs/footer-img.png)
+
+       * #### Home Page
+
+          
+         
 
    * ### Technologies Used
 
