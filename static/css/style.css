@@ -204,3 +204,8 @@ html {
 .a-link:hover {
     color: #ef2917;
 }
+
+/***********************Image Styling************************/
+.card-img-top {
+    height: 360px;
+}

@@ -3,7 +3,7 @@
 ## Table of Contents
 
 * [Testing user stories](#testing-user-stories)
-* Manual Testing
+* [Manual Testing](#manual-testing)
 * [Validator Testing](#validator-testing)
   * [W3C HTML Validator](#w3c-html-validator)
   * [W3C CSS Validator](#w3c-css-validator)
@@ -207,7 +207,7 @@
        | Steps Input- empty | Steps is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass | 
        | Serves Input- empty | Serves is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
        | Duration Input- empty | Duration is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
-       | Add Recipe Button | This should redirect the user to the Home page and display message that recipe added successfully | Submitted form | Redirected to the home page and message displayed | Pass |
+       | Add Recipe Button | This should redirect the user to the Recipe page and display message that recipe added successfully | Submitted form | Redirected to the recipe page and message displayed | Pass |
        | Cancel Link | This should redirect the user to the Recipe page | Clicked Link | Redirect to the recipe page | Pass |  
 
    * ### Recipe Edit Page Testing 
@@ -274,6 +274,20 @@
        | Search - empty | When user submit no value in search field, displays you didnt search anything  | Submitted Form | Displayed message to the user | Pass | 
        | Search Doesnot Exist | When user submit value that doesnot exist, display message no results found | Submitted Form | Displayed message to the user | Pass |    
    
+   * ### Logout Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | Logout |  |  |  |  |
+       | Log Out Button | Should redirect user to the Home page and display message that user is sign out successfully | submitted form | Redirected  to the home page and message displayed | Pass |
+       | Cancel Link | Should redirect user to the Home page | Clicked Link | Redirect to the home page | Pass |
+
+   * ### 404 Page Testing 
+
+       | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
+       | --- | --- | --- | --- | --- |
+       | 404 |  |  |  |  |
+       | Home page link | Redirects the user to the home page | Clicked link | Redirected to home page | Pass |    
 
 ## Validator Testing
 
