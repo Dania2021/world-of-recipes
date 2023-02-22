@@ -129,7 +129,7 @@ class AddRecipeView(View):
             messages.error(
                 request, 'There was an error submitting your recipe.')
 
-        return HttpResponseRedirect(reverse('home'))
+        return HttpResponseRedirect(reverse('recipe'))
 
 
 class UpdateRecipeView(View):
