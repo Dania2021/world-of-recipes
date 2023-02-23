@@ -304,8 +304,30 @@ Live Site:
       ![list-of-recipes](/readme_docs/recipe-list-img.png)
 
       ![pagination](/readme_docs/pagination.png)
-      
-      
+
+      * #### Recipe Detail Page
+
+        Recipe detail page displays the full view of recipe as well as comments on that recipe
+
+        ![recipe-detail](/readme_docs/recipe-detail.png)
+
+        ![comments](/readme_docs/comment-img.png)
+
+        For registered user form is displayed to add their comments on that recipe
+
+        ![enter-comment](/readme_docs/enter-comment.png)
+
+        For unregistered user message display with a link to login page.
+
+        ![link-to-login](/readme_docs/why-not-img.png)
+
+      * #### Search Page
+
+         Search page displays  information about the Search being handled with a paginated list of the recipes matching the search and its relevant information for the user to identify.
+
+      ![search-page](/readme_docs/result-found-search.png)
+
+
    * ### Technologies Used
 
       #### Languages Used
