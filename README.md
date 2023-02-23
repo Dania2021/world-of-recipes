@@ -25,13 +25,23 @@ Live Site:
     * [Features](#features)
        * [General](#general)
        * [Home Page](#home-page)
-       * Login Page
-       * SignUp Page
-       * Profile Page
-       * Recipes Page
-       * Search page
-       * Logout Page
+       * [Login Page](#login-page)
+       * [SignUp Page](#signup-page)
+       * [Profile Page](#profile-page)
+       * [Edit Profile Page](#edit-profile-page)
+       * [Delete Profile Modal](#delete-profile-modal)
+       * [Recipe Add Page](#recipe-add-page)
+       * [Recipe Edit Page](#recipe-edit-page)
+       * [Recipe Delete Modal](#recipe-delete-modal)
+       * [Recipe Page](#recipe-page)
+       * [Recipes Page](#recipes-page)
+       * [Recipes List Page](#recipes-list-page)
+       * [Recipe Detail Page](#recipe-detail-page)
+       * [Search page](#search-page)
+       * [Logout Page](#logout-page)
+       * [404 Page](#404-page)
        * Admin Site
+       * Accessibility
        * Future Features
     * [Technologies Used](#technologies-used)
        * [Languages Used](#languages-used)
@@ -161,11 +171,11 @@ Live Site:
             The navigation bar contains the main logo, section links and search bar. 
             The site's navigation tabs are displayed Home, Recipes, Login, Signup when the user isn't logged in.
 
-            ![Navigation bar](/readme_docs/header-img.png)
+          ![Navigation bar](/readme_docs/header-img.png)
 
             The site's navigation tabs are changed to Home, Recipes, Profile, Logout when the user is logged in.
 
-            ![Login Navigation bar](/readme_docs/header-login-img.png)
+          ![Login Navigation bar](/readme_docs/header-login-img.png)
 
             The search bar provide the Site User an input field and a Search button to be able to search for specific recipes by using keyord title or ingredients.
 
@@ -173,13 +183,39 @@ Live Site:
 
             A footer is displayed on all pages of the website and contains the copyright and links to social media channels
 
-            ![Footer](/readme_docs/footer-img.png)
+          ![Footer](/readme_docs/footer-img.png)
 
        * #### Home Page
 
-          
-         
+           The home page contains hero image with a tag line, quote and two across explainer sections.
 
+           ![hero-image](/readme_docs/hero-img.png)
+
+           There are call-to-action buttons on the page, making the next step clear and easy to the user.
+
+           ![quote](/readme_docs/two-cards-img.png)
+         
+      * #### Login Page
+
+          Login page allow the Site User to sign in with their account.
+
+          ![login-page](/readme_docs/login-img.png)
+
+          Login Confirmation
+
+          ![login-message](/readme_docs/msg-signin.png)
+
+      * #### SignUp Page
+
+          Signup page allow the Site User to sign up an account for the website. 
+
+          ![signup-page](/readme_docs/signup-img.png)  
+
+          Signup Confirmation
+
+          ![signup-message](/readme_docs/msg-signin.png) 
+
+      
    * ### Technologies Used
 
       #### Languages Used
