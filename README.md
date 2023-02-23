@@ -327,6 +327,17 @@ Live Site:
 
       ![search-page](/readme_docs/result-found-search.png)
 
+      * #### Logout Page
+
+         Logout page allow the Site User to sign out from their account.
+
+         ![logout](/readme_docs/logout-img.png)
+
+      * #### 404 Page
+
+        404 page displays if the page is not found
+
+        ![404](/readme_docs/404-img.png)
 
    * ### Technologies Used
 
