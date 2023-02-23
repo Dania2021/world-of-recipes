@@ -81,8 +81,8 @@ class RecipeDetail(View):
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
+            comment.author = request.user
             comment.recipe = recipe
             comment.save()
             messages.success(request, 'Comment Added')
