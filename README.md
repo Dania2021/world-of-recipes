@@ -245,6 +245,37 @@ Live Site:
 
            ![profile-delete-message](/readme_docs/msg-profile-delete.png)
 
+      * #### Recipe Add Page
+
+         Provide a form to allow registered user to add a recipe.
+
+         ![recipe-add-form](/readme_docs/recipe-add-img.png)
+
+         Recipe Add Confirmation
+
+         ![recipe-add-message](/readme_docs/msg-add-recipe.png)  
+
+      * #### Recipe Edit Page
+
+         Provide a prepopulated form to allow the Site User to edit a recipe they created. 
+
+         ![recipe-edit-form](/readme_docs/edit-recipe-img.png)
+
+         Recipe Edit Confirmation
+
+         ![recipe-edit-form](/readme_docs/msg-edit-recipe.png)
+
+      * #### Recipe Delete Modal
+
+         Provide a modal to allow the Site User to delete a recipe they created.
+
+         ![recipe-delete-modal](/readme_docs/delete-recipe-img.png)   
+
+         Recipe Delete Confirmation
+
+         ![recipe-delete-message](/readme_docs/msg-edit-recipe.png)
+
+
       
       
    * ### Technologies Used
