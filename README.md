@@ -275,7 +275,35 @@ Live Site:
 
          ![recipe-delete-message](/readme_docs/msg-edit-recipe.png)
 
+      * #### Recipe Page
 
+         Recipe page consists of two cards. One card displays the user's profile view and the other card displays user's recipes that user have created with a button to add recipe.
+
+         ![profile](/readme_docs/profile-img.png)   
+
+         ![my-recipes](/readme_docs/my-recipes-img.png) 
+
+         If user doesnot created any recipe then a message displays for user to create recipe.
+
+         ![no-recipes-added](/readme_docs/no-recipe-img.png)
+
+      * #### Recipes Page
+
+         Recipes page displays the view of recipe that user have created with update and delete button.
+
+         ![recipe-image](/readme_docs/recipe-img.png)
+  
+      ![recipe-view](/readme_docs/recipe-view-img.png)
+
+      ![buttons-image](/readme_docs/button-img.png)
+
+      * #### Recipes List Page
+
+         Recipes list page displays the list of recipes that have been created by user and other users with pagination to redirect the user to previous or next page.
+     
+      ![list-of-recipes](/readme_docs/recipe-list-img.png)
+
+      ![pagination](/readme_docs/pagination.png)
       
       
    * ### Technologies Used
