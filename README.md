@@ -41,8 +41,8 @@ Live Site:
        * [Logout Page](#logout-page)
        * [404 Page](#404-page)
        * Admin Site
-       * Accessibility
-       * Future Features
+       * [Accessibility](#accessbility)
+       * [Future Features](#future-features)
     * [Technologies Used](#technologies-used)
        * [Languages Used](#languages-used)
        * [Libraries and Frameworks](#libraries-and-frameworks)
@@ -273,7 +273,7 @@ Live Site:
 
          Recipe Delete Confirmation
 
-         ![recipe-delete-message](/readme_docs/msg-edit-recipe.png)
+         ![recipe-delete-message](/readme_docs/msg-recipe-delete.png)
 
       * #### Recipe Page
 
@@ -338,6 +338,28 @@ Live Site:
         404 page displays if the page is not found
 
         ![404](/readme_docs/404-img.png)
+
+      * #### Accessbility
+
+        I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
+
+         * Using semantic HTML.
+         * Using descriptive alt attributes on images on the site.
+         * Providing information for screen readers where there are icons used and no text.
+         * Providing aria-labels for button and links.
+         * Using Hover effect on the buttons and links.
+         * Using active class on the navbar elements.
+         * Ensuring that there is a sufficient colour contrast throughout the site.  
+
+      * #### Future Features
+
+         In future implementations I would like to:
+
+        * I would like to add tags on the recipe.
+        * Users could add private comments (e.g. their own notes from having tried making the recipe) and/or public comments to let other users know helpful tips or reviews.
+        * The ability for users to login via social networks such as google or facebook.
+        * Forgot/reset password functionality.
+        * Frontend Admin page so that where superusers can see a general overview of how well the website is performing.  
 
    * ### Technologies Used
 
