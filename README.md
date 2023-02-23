@@ -215,6 +215,37 @@ Live Site:
 
           ![signup-message](/readme_docs/msg-signin.png) 
 
+      * #### Profile Page
+
+          The profile page add user's personal information such as profile first name, profile last name and image.
+
+          ![profile-page](/readme_docs/add-profile-img.png) 
+
+          Profile Add Confirmation
+
+           ![profile-add-message](/readme_docs/msg-add-profile.png)
+
+      * #### Edit Profile Page
+
+         User is able to update all of the personal details. The updated data is also updated in the database in the same time.
+
+         ![edit-profile-page](/readme_docs/update-profile-img.png)
+
+         Profile Edit Confirmation
+
+          ![profile-edit-message](/readme_docs/msg-edit-profile.png) 
+
+      * #### Delete Profile Modal
+
+          User is able to delete the profile with all the data from the database. User is redirected to the delete profile modal where it gives user a message that asks user to confirm the delete process.  
+
+          ![delete-profile-modal](/readme_docs/delete-profile-img.png)
+
+          Delete Profile Confirmation
+
+           ![profile-delete-message](/readme_docs/msg-profile-delete.png)
+
+      
       
    * ### Technologies Used
 
