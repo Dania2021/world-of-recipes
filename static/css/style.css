@@ -125,7 +125,12 @@ footer p{
     #msg {
         font-size: 85%;
     }
+}
 
+@media screen and (max-width: 375px) {
+    .bg-text {
+        font-size: 75%;
+    }
 }
 
 @media screen and (min-width: 320px) {
