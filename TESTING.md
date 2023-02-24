@@ -10,7 +10,7 @@
   * [JSHint JavaScript validator](#jshint-javascript-validator)
   * [Python Validation](#python-validation)
 * [Lighthouse Testing](#lighthouse-testing)
-* [Browser Compatibility Testing](#browser-compatibility-test)
+* [Browser Compatibility Testing](#browser-compatibility-testing)
 * [Tools Testing](#tool-testing)
 * Bugs
     * Resolved Bugs
@@ -161,6 +161,8 @@
        | Incorrect username or password used | Display message when credentials are not valid. | Incorrect username/password entered | Message display to let the user know they have entered an incorrect username/password | Pass |
        | Link to Signup page | This should redirect the user to the Signup page | Clicked link | Redirected to the signup page | Pass |
 
+       ![Login-page-error](/readme_docs/login-error.png)
+
    * ### Signup Page Testing 
 
        | Feature | Expected Outcome | Testing Performed | Result |Pass/Fail |
@@ -176,6 +178,8 @@
        | Password (again) input - empty | The password is a required field, so should not submit with no value | Tried to submit form with no value entered | Tooltip lets user know this value is required | Pass |
        | Signup Button | Should redirect user to the Profile page and display message that user is successfully created | Created new user and submitted form | Redirected to the profile page and message displayed | Pass |
        | Link to Login page | This should redirect the user to the Login page | Clicked link | Redirected to the login page | Pass |
+
+       ![signup-page-error](/readme_docs/signup-error.png)
 
    * ### Recipes List Page Testing
 
@@ -272,7 +276,11 @@
        | Search Button | A search is performed when the user enters a search title | Submitted Form | The search returns recipe results | Pass |
        | Search Button | A search is performed when the user enters a search an ingredient | Submitted Form | The search returns recipe results | Pass |
        | Search - empty | When user submit no value in search field, displays you didnt search anything  | Submitted Form | Displayed message to the user | Pass | 
-       | Search Doesnot Exist | When user submit value that doesnot exist, display message no results found | Submitted Form | Displayed message to the user | Pass |    
+       | Search Doesnot Exist | When user submit value that doesnot exist, display message no results found | Submitted Form | Displayed message to the user | Pass |
+
+       ![no-search](/readme_docs/empty-search.png) 
+
+       ![search-not-found](/readme_docs/result-not-found-search.png)   
    
    * ### Logout Page Testing 
 
