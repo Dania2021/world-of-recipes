@@ -40,7 +40,7 @@ Live Site:
        * [Search page](#search-page)
        * [Logout Page](#logout-page)
        * [404 Page](#404-page)
-       * Admin Site
+       * [Admin Site](#admin-site)
        * [Accessibility](#accessbility)
        * [Future Features](#future-features)
     * [Technologies Used](#technologies-used)
@@ -338,6 +338,22 @@ Live Site:
         404 page displays if the page is not found
 
         ![404](/readme_docs/404-img.png)
+
+      * #### Admin Site  
+
+        The site includes an administrator panel only accessible to users with admin or super-user permissions to manage the data with full CRUD functionality.
+
+        * Profile List of all users
+
+         ![profile-list](/readme_docs/profile-admin.png)
+
+        * Recipes List of all users
+
+         ![recipes-list](/readme_docs/recipe-admin.png)
+
+        * Comments List of all users
+
+         ![comments-list](/readme_docs/comments-admin.png) 
 
       * #### Accessbility
 
