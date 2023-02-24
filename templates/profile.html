@@ -9,6 +9,7 @@
        <div class="row justify-content-center">
         <!--To create a Profile-->
          <div class="col-md-6 mt-4">
+              {% if user.is_authenticated %}
               <h2 class="text-center text-col1 fw-bold">Add your Profile</h2>
               <div class="card-panel bg-color3 text-col2">
                   <form method="POST" class="ms-3 mt-3 pe-3 fw-bold" enctype="multipart/form-data" action="{% url 'profile' %}">
@@ -20,6 +21,7 @@
                      </div>
                     </form>
                </div>
+               {% endif %}
            </div>
         </div>
     </div>

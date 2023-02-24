@@ -56,11 +56,11 @@ Live Site:
       * [Imagery](#imagery)
     * [Deployment](#deployment)
  * [Testing](#testing)
- * Credits
-      * Content
-      * Media
-      * Code
- * Acknowledgement   
+ * [Credits](#credits)
+      * [Content](#content)
+      * [Media](#media)
+      * [Code](#code)
+ * [Acknowledgement](#acknowledgement)   
 
 ## Strategy
 
@@ -491,3 +491,30 @@ Live Site:
 ## Testing
 
    The testing documentation can be found [here](TESTING.md)
+
+## Credits
+
+   * ### Content
+ 
+     The content for recipes has been taken from [BBC Good Food](https://www.bbcgoodfood.com/)
+
+   * ### Media
+
+     All the images that are used in this site is from [Pexels](https://www.pexels.com/):
+       * Hero image
+       * Placeholder image of recipe and profile
+       * Recipe image
+       * Profile image
+       * Favicon image
+
+   * ### Code
+
+     * The code of signals.py are taken from [Django Signals](https://dev.to/earthcomfy/django-user-profile-3hik).
+     * To identify and apply class to the current active link from [Stackoverflow](https://stackoverflow.com/questions/46617375/how-do-i-show-an-active-link-in-a-django-navigation-bar-dropdown-list).
+     * Message implementation an dismissal code is taken from Code Institute's django-blog project.
+
+## Acknowledgement
+
+   The World of Recipes was created as my fourth portfolio project. I would like to thank my mentor Marcel Mulders for his helpful feedback and encouragement throughout the development process. I would also like to thank tutor of code institute for their support. I'd like to thank fellow Code Institute students in May 2022 class at code institute.
+
+  Dania Khanam
