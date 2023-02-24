@@ -10,8 +10,8 @@
   * [JSHint JavaScript validator](#jshint-javascript-validator)
   * [Python Validation](#python-validation)
 * [Lighthouse Testing](#lighthouse-testing)
-* Browser Compatibility Testing
-* Tools Testing
+* [Browser Compatibility Testing](#browser-compatibility-test)
+* [Tools Testing](#tool-testing)
 * Bugs
     * Resolved Bugs
     * Unresolved Bugs
@@ -422,3 +422,23 @@
     * Lighthouse report for mobile 
 
         ![lighthouse-mobile-profile-edit](/readme_docs/lighthouse-mobile-edit-profile.png)  
+
+## Browser Compatibility Testing
+
+  | Browser | Outcome |Pass/Fail |
+  | --- | --- | --- |
+  | Google Chrome | No appearance, responsiveness nor functionality issues. | Pass |
+  | Safari | No appearance, responsiveness nor functionality issues. | Pass |
+  | Mozilla Firefox | No appearance, responsiveness nor functionality issues. | Pass |
+  | Microsoft Edge | No appearance, responsiveness nor functionality issues. | Pass |
+
+## Tool Testing
+
+  | Browser | Operative System | Outcome | Pass/Fail |
+  | --- | --- | --- | --- |
+  | HP 15 Notebook | Windows 10 | No appearance, responsiveness nor functionality issues. | Pass |
+  | Lenevo Think Pad | Windows 11 | No appearance, responsiveness nor functionality issues. | Pass |
+  | iPad 10.9" | iOS 16.3.1 | No appearance, responsiveness nor functionality issues. | Pass |
+  | iPhone 13 | iOS 15 | No appearance, responsiveness nor functionality issues. | Pass |
+  | Galaxy S8 | Android 7.0 Nougat | No appearance, responsiveness nor functionality issues. | Pass |
+  |  iPhone 7 | iOS 10 | No appearance, responsiveness nor functionality issues. | Pass |
