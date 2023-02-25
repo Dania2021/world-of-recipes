@@ -59,6 +59,10 @@ class RecipeDetail(View):
     fields = '__all__'
 
     def get(self, request, id, *args, **kwargs):
+        '''
+        Get recipe information, comment and comment form and
+        render data for rendering
+        '''
         recipe_detail = Recipe.objects.all()
         recipe = get_object_or_404(recipe_detail, id=id)
         comments = recipe.comments.filter(approved=True)
@@ -74,6 +78,10 @@ class RecipeDetail(View):
         )
 
     def post(self, request, id, *args, **kwargs):
+        '''
+        Create new comment using form data and display approved comments
+        and returns to recipes detail page
+        '''
         recipe_detail = Recipe.objects.all()
         recipe = get_object_or_404(recipe_detail, id=id)
         comments = recipe.comments.filter(approved=True)
@@ -108,6 +116,9 @@ class AddRecipeView(View):
     To display form to upload recipe by authenticated user
     '''
     def get(self, request):
+        '''
+        Get recipe form and render data
+        '''
         add_form = RecipeForm()
 
         return render(
@@ -119,6 +130,9 @@ class AddRecipeView(View):
         )
 
     def post(self, request):
+        '''
+        Create recipe using the form data and returns to recipe page
+        '''
         add_form = RecipeForm(request.POST, request.FILES)
         if add_form.is_valid():
             add_form.instance.author = request.user
@@ -137,6 +151,9 @@ class UpdateRecipeView(View):
     To display form to update recipe
     '''
     def get(self, request, id):
+        '''
+        Get recipe data and return prepopulated form
+        '''
         recipe = get_object_or_404(Recipe, id=id)
         update_form = RecipeForm(instance=recipe)
 
@@ -150,6 +167,10 @@ class UpdateRecipeView(View):
         )
 
     def post(self, request, id):
+        '''
+        Update existing recipe using form data
+        and return to recipe page
+        '''
         recipe = get_object_or_404(Recipe, id=id)
         update_form = RecipeForm(
             request.POST, request.FILES, instance=recipe)
@@ -199,6 +220,9 @@ class ProfileAddView(View):
     To display a form to add user's profile
     '''
     def get(self, request):
+        '''
+        Get profile form and render data
+        '''
         profile = get_object_or_404(Profile, user=request.user)
         profile_form = ProfileForm(instance=profile)
 
@@ -211,6 +235,9 @@ class ProfileAddView(View):
         )
 
     def post(self, request):
+        '''
+        Create a new profile using form data and return to recipe page
+        '''
         profile = get_object_or_404(Profile, user=request.user)
         profile_form = ProfileForm(
             request.POST, request.FILES, instance=profile)
@@ -232,6 +259,9 @@ class ProfileEditView(View):
     To display a form for user to update profile
     '''
     def get(self, request):
+        '''
+        Get profile data and return prepopulated form
+        '''
         profile = get_object_or_404(Profile, user=request.user)
         update_profile = ProfileForm(instance=profile)
 
@@ -245,6 +275,10 @@ class ProfileEditView(View):
         )
 
     def post(self, request):
+        '''
+        Update existing profile using the form data
+        return to recipe page
+        '''
         profile_queryset = Profile.objects.filter(user=request.user)
         get_object_or_404(profile_queryset)
         profile = profile_queryset.first()
