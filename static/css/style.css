@@ -125,6 +125,15 @@ footer p{
     #msg {
         font-size: 85%;
     }
+    .no-recipe {
+        font-size: 100%;
+    }
+    .msg-text {
+        font-size: 90%;
+    }
+    .add-comment {
+        font-size: 90%;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -143,6 +152,9 @@ footer p{
 }
 
 @media screen and (min-width: 375px) {
+    .no-recipe {
+        font-size: 120%;
+    }
     footer p {
         font-size: 65%;
     }
@@ -166,6 +178,9 @@ footer p{
 @media screen and (min-width: 1024px) {
     .navbar-nav {
         margin-left: 30px;
+    }
+    .no-recipe {
+        font-size: 140%;
     }
 }
 /***********************styling on all pages****/ 
@@ -210,7 +225,7 @@ html {
     color: #ef2917;
 }
 
-/***********************Image Styling************************/
+/***********************Image Styling***********************/
 .card-img-top {
     height: 360px;
 }

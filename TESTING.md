@@ -12,9 +12,9 @@
 * [Lighthouse Testing](#lighthouse-testing)
 * [Browser Compatibility Testing](#browser-compatibility-testing)
 * [Tools Testing](#tool-testing)
-* Bugs
-    * Resolved Bugs
-    * Unresolved Bugs
+* [Bugs](#bugs)
+    * [Resolved Bugs](#resolved-bugs)
+    * [Unresolved Bugs](#unresolved-bugs)
 
 ## Testing User Stories
 
@@ -450,3 +450,18 @@
   | iPhone 13 | iOS 15 | No appearance, responsiveness nor functionality issues. | Pass |
   | Galaxy S8 | Android 7.0 Nougat | No appearance, responsiveness nor functionality issues. | Pass |
   |  iPhone 7 | iOS 10 | No appearance, responsiveness nor functionality issues. | Pass |
+
+## Bugs
+
+   * ### Resolved Bugs
+
+      * Testing of the update recipe form showed that recipe images were not uploading to cloudinary. This was rectifed by adding the enctype="multipart/form-data" attribute to the form element.
+      * The modal was not showing when the user wants to delete their recipe. This was fixed by adding id attibute into recipe deletion form.
+
+   * ### Unresolved Bugs
+       * The error is showing in console, I have tried to fix this error as suggested by my mentor. But still error is there. This error is not effecting the functionality of the site.
+
+        ![Error](/readme_docs/js-error.png)
+
+       * Summernote editor is not displaying text correctly, when I was adding the recipe from admin panel. I tried to fix this but still editor is not displaying text correctly.
+      
